@@ -5,17 +5,12 @@ import * as serviceWorker from './serviceWorker';
 
 import "semantic-ui-css/semantic.min.css";
 import Home from "./component/Home";
-import Nimadir from "./component/Nimadir";
-import Company from "./component/Company";
-import Price from "./component/Price";
-import Client from "./component/Client";
+
 import Footer from "./component/Footer";
-import News from "./component/News";
-import Partners from "./component/Partners";
-import Ads from "./component/Ads";
+
 import Navbar from "./component/Navbar";
 import AboutCompany from "./container/AboutCompany";
-import Counter from "./component/Counter";
+
 import Contact from "./component/Contact";
 import AboutPrice from "./container/AboutPrice";
 import AboutNews from "./container/AboutNews";
