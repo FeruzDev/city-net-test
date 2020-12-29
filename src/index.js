@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import Responsive from "./component/Res";
 import "semantic-ui-css/semantic.min.css";
 import Home from "./component/Home";
 import Nimadir from "./component/Nimadir";

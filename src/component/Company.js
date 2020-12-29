@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
 import {Button, Col, Container, Row} from "reactstrap";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 class Company extends Component {
     render() {
-        AOS.init({
 
-            duration: 1200,
-        })
 
         return (
             <div className="company">

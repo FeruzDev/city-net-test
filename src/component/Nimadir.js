@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Container, NavbarBrand, Row} from "reactstrap";
-import {Animated} from "react-animated-css";
+
 
 class RecBox extends Component {
     render() {
