@@ -18,9 +18,13 @@ class Footer extends Component {
 
                             <a href="#">Новости</a>
 
+                            <a href="#">Публичная Оферта</a>
+
+                            <a href="#">Документы</a>
+
                         </p>
 
-                        <p className="footer-company-name">City net © 2018</p>
+
                     </div>
 
                     <div className="footer-center">
@@ -73,7 +77,7 @@ class Footer extends Component {
 
                     </div>
 
-                    <p className="footerTitle">©2018 - 2020 "Citynet". Все права защищены.</p>
+                    <p className="footerTitle">©2018 - 2020 "OOO Citynet". Все права защищены.</p>
 
                 </footer>
             </div>

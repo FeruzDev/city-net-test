@@ -28,7 +28,7 @@ class Ads extends Component {
                                     fugiat, fugit ipsa iusto laborum laudantium numquam optio rem tenetur ut? Amet
                                     impedit ipsa laudantium, minima nihil non reiciendis! Consequatur, sunt!</p>
 
-                                <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
+                                <a href="#!" className="hvr-pop">ЧИТАТЬ ДАЛЕЕ »</a>
                             </div>
                         </Col>
                     </Row>

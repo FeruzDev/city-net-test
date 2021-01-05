@@ -6,8 +6,11 @@ class Contact extends Component {
     render() {
         return (
             <div  className="Contact">
+                <div className="aboutBackFon">
+                    <h2>Связаться с нами</h2>
+                </div>
                 <img className="backCon" src="img\backCon.svg" alt=""/>
-                <h1>Связаться с нами</h1>
+                {/*<h1>Связаться с нами</h1>*/}
 
                       <Container fluid={true}>
                           <Row>

@@ -19,7 +19,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import Main from "./component/Main";
 
@@ -28,50 +27,23 @@ ReactDOM.render(
     <React.StrictMode>
 
 
-        {/*<Responsive />*/}
-
-
-        {/*<Main></Main>*/}
-        {/*<Ads></Ads>*/}
-        {/*<Nimadir></Nimadir>*/}
-        {/*<Counter></Counter>*/}
-
-        {/*<Company></Company>*/}
-
-        {/*<Price></Price>*/}
-        {/*<Client></Client>*/}
-        {/*<News></News>*/}
-
-        {/*<Partners></Partners>*/}
-
-
-        {/*<AboutPrice></AboutPrice>*/}
-
-        {/*<AboutNews></AboutNews>*/}
-
-        {/*<Contact></Contact>*/}
-
-        {/*<AboutCompany></AboutCompany>*/}
-        {/*<Counter></Counter>*/}
-
-
         <Router>
             <Navbar/>
-            <Home/>
+            {/*<Home/>*/}
 
             <Switch>
 
-
-                {/*<Route path="/main" component={Home}/>*/}
                 <Route exact path="/">
+
                     <Main/>
                 </Route>
-                <Route path="/company">
+                <Route exact path="/company">
                     <AboutCompany/>
                 </Route>
-                <Route path="/price" component={AboutPrice}/>
-                <Route path="/news" component={AboutNews}/>
-                <Route path="/contact" component={Contact}/>
+                <Route exact path="/tariff" component={AboutPrice}/>
+
+                <Route exact path="/news" component={AboutNews}/>
+                <Route exact path="/contact" component={Contact}/>
             </Switch>
         </Router>
 

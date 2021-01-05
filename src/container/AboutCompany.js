@@ -7,7 +7,9 @@ class AboutCompany extends Component {
     render() {
         return (
             <div className="AboutCompany">
-
+                <div className="aboutBackFon">
+                    <h2>О компании</h2>
+                </div>
                 <h1 className="aboutCompanyTitle">Преимущества компании "CityNet"</h1>
 
                 <section>

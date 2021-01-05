@@ -17,96 +17,129 @@ class AboutNews extends Component {
     render() {
         return (
             <div className="aboutNews">
-                <h1 >Подробности новости</h1>
-                <Container fluid={true}>
+                <div className="aboutBackFon">
+                    <h2>Новости</h2>
+                </div>
 
+                <Container fluid={true}>
                     <Row>
-                        <Col md={{size: '5'}}>
+                        <Col md={8}>
                             <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
+                                <div>
+                                    <img src="img/internet3.jpg" alt="News image cap"/>
+                                    <span className="date">
+                                          <span className="day">7</span>
+                                          <span className="month">Jan</span>
+                                      </span>
+                                </div>
+                                    <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
+                                    <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
+                                        fugiat nulla repellendus velit vero?</p>
+                                    <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+
                             </Card>
+                            <Card>
+                                <div>
+                                    <img src="img/internet3.jpg" alt="News image cap"/>
+                                    <span className="date">
+                                          <span className="day">7</span>
+                                          <span className="month">Jan</span>
+                                      </span>
+                                </div>
+                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
+                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
+                                    fugiat nulla repellendus velit vero?</p>
+                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+
+                            </Card>
+                            <Card>
+                                <div>
+                                    <img src="img/internet3.jpg" alt="News image cap"/>
+                                    <span className="date">
+                                          <span className="day">7</span>
+                                          <span className="month">Jan</span>
+                                      </span>
+                                </div>
+                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
+                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
+                                    fugiat nulla repellendus velit vero?</p>
+                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+
+                            </Card>
+                            <Card>
+                                <div>
+                                    <img src="img/internet3.jpg" alt="News image cap"/>
+                                    <span className="date">
+                                          <span className="day">7</span>
+                                          <span className="month">Jan</span>
+                                      </span>
+                                </div>
+                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
+                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
+                                    fugiat nulla repellendus velit vero?</p>
+                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+
+                            </Card>
+                            <Card>
+                                <div>
+                                    <img src="img/internet3.jpg" alt="News image cap"/>
+                                    <span className="date">
+                                          <span className="day">7</span>
+                                          <span className="month">Jan</span>
+                                      </span>
+                                </div>
+                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
+                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
+                                    fugiat nulla repellendus velit vero?</p>
+                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+
+                            </Card>
+
                         </Col>
-                        <Col md={{size: '5'}}>
-                            <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
-                            </Card>
-                        </Col>
-                        <Col md={{size: '5'}}>
-                            <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
-                            </Card>
-                        </Col>
-                        <Col md={{size: '5'}}>
-                            <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
-                            </Card>
-                        </Col>
-                        <Col md={{size: '5'}}>
-                            <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
-                            </Card>
-                        </Col>
-                        <Col md={{size: '5'}}>
-                            <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
-                            </Card>
-                        </Col>
-                        <Col md={{size: '5'}}>
-                            <Card>
-                                <CardImg top  src="img/internet3.jpg" alt="News image cap" />
-                                <CardBody>
-                                    <CardTitle tag="h5">{this.state.newsTitle}</CardTitle>
-                                    <CardText>{this.state.newContent}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>
-                                </CardFooter>
-                            </Card>
+                        <Col md={4}>
+                            <div className="inputGroupM">
+                                <div className="inputGroup">
+                                    <input type="text"  placeholder="Search.." />
+                                    <button><img src="./img/icon/loupe.svg" alt=""/></button>
+                                </div>
+                                <button className="searchBtn">SEARCH</button>
+                            </div>
+                            <div className="recentPost">
+                                <h2>Recent Post</h2>
+                                <div>
+                                    <img src="img/ipt2.jpeg" alt="News image cap"/>
+                                  <p>
+                                      <a href="#!">Lorem ipsum dolor.</a>
+                                      <span>January 12, 2021</span>
+                                  </p>
+                                </div>
+                                <div>
+                                    <img src="img/iptv2.jpg" alt="News image cap"/>
+                                    <p>
+                                        <a href="#!">Lorem ipsum dolor.</a>
+                                        <span>January 12, 2021</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <img src="img/int.jpg" alt="News image cap"/>
+                                    <p>
+                                        <a href="#!">Lorem ipsum dolor.</a>
+                                        <span>January 12, 2021</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <img src="img/internet3.jpg" alt="News image cap"/>
+                                    <p>
+                                        <a href="#!">Lorem ipsum dolor.</a>
+                                        <span>January 12, 2021</span>
+                                    </p>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
+
+
             </div>
         );
     }

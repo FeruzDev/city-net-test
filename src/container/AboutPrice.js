@@ -8,7 +8,10 @@ class AboutPrice extends Component {
 
         return (
             <div className="AboutPrice">
-                <img className="BackLeft" src="img\backFon.svg" alt=""/>
+                <div className="aboutBackFon">
+                    <h2>Все Тарифы</h2>
+                </div>
+                {/*<img className="BackLeft" src="img\backFon.svg" alt=""/>*/}
                 <h1 className="aboutPrivceTitle">О наших тарифах для личного</h1>
 
                 <p>CityNet всегда шагает в ногу со временем, динамично развивается и остается лидером своем сегменте.
@@ -16,7 +19,6 @@ class AboutPrice extends Component {
                     отметок. Сейчас сфера деятельности компании охватывает всю территорию города Ташкент и некоторые из
                     ближних регионов.</p>
                 <Price ></Price>
-                <Client></Client>
                 {/*<img className="BackRight" src="img\backFon.svg" alt=""/>*/}
 
                 <h1>О наших тарифах для магазина</h1>
@@ -25,6 +27,9 @@ class AboutPrice extends Component {
                 <h1>О наших тарифах для бизнеса</h1>
                 <p>Citynet - универсальный оператор связи для бизнеса, <br/>оказывающий услуги в режиме персонального
                     телеком-ателье для предприятий всех отраслей</p>
+
+                <Client></Client>
+
             </div>
         );
     }

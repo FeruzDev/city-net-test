@@ -35,22 +35,24 @@ const NavbarMain = (props) => {
                     <NavbarToggler onClick={toggle} >
                         <img src="img/icon/list.svg" alt=""/>
                     </NavbarToggler>
+
                     <Collapse isOpen={isOpen} navbar>
-                        <Nav className="mr-auto" navbar>
+                        <Nav className="mr-auto " navbar>
+
                             <NavItem>
-                                <Link to="/"  >Главное</Link>
+                                <Link to="/company" >О Компании</Link>
 
                             </NavItem>
                             <NavItem>
-                                <Link to="/company" >О нас</Link>
-
-                            </NavItem>
-                            <NavItem>
-                                <Link to="/price">Интернет</Link>
+                                <Link to="/tariff">Интернет</Link>
 
                             </NavItem>
                             <NavItem>
                                 <Link to="/news">Новости</Link>
+
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/ads"  >Oбъявление</Link>
 
                             </NavItem>
                             <NavItem>
@@ -69,7 +71,7 @@ const NavbarMain = (props) => {
                                 </NavItem>
 
                                 <NavItem>
-                                        <Link><span><img src="./img/account.svg" alt=""/></span> <span>Кабинет</span></Link>
+                                        <Link><span ><img src="./img/account.svg" alt=""/></span> <span className="cabinet">Кабинет</span></Link>
 
                                 </NavItem>
 

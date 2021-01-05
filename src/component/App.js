@@ -14,77 +14,114 @@ class App extends React.Component {
                       },
                       fpsLimit: 60,
                       interactivity: {
-                          detectsOn: "canvas",
+                          detect_on: "canvas",
                           events: {
-                              onClick: {
+                              onhover: {
                                   enable: true,
-                                  mode: "push",
+                                  mode: "grab"
                               },
-                              onHover: {
+                              onclick: {
                                   enable: true,
-                                  mode: "repulse",
+                                  mode: "push"
                               },
-                              resize: true,
+                              resize: true
                           },
                           modes: {
+                              grab: {
+                                  distance: 140,
+                                  line_linked: {
+                                      opacity: 1
+                                  }
+                              },
                               bubble: {
                                   distance: 400,
-                                  duration: 2,
-                                  opacity: 0.8,
                                   size: 40,
-                              },
-                              push: {
-                                  quantity: 4,
+                                  duration: 2,
+                                  opacity: 8,
+                                  speed: 3
                               },
                               repulse: {
-                                  distance: 100,
-                                  duration: 0.4,
+                                  distance: 200,
+                                  duration: 0.4
                               },
-                          },
+                              push: {
+                                  particles_nb: 4
+                              },
+                              remove: {
+                                  particles_nb: 2
+                              }
+                          }
                       },
                       particles: {
-                          color: {
-                              value: "#ffffff",
-                          },
-                          links: {
-                              color: "#ffffff",
-                              distance: 150,
-                              enable: true,
-                              opacity: 0.5,
-                              width: 1,
-                          },
-                          collisions: {
-                              enable: true,
-                          },
-                          move: {
-                              direction: "none",
-                              enable: true,
-                              outMode: "bounce",
-                              random: false,
-                              speed: 6,
-                              straight: false,
-                          },
                           number: {
+                              value: 80,
                               density: {
                                   enable: true,
-                                  value_area: 800,
-                              },
-                              value: 80,
+                                  value_area: 700
+                              }
                           },
-                          opacity: {
-                              value: 0.5,
+                          color: {
+                              value: "#ffffff"
                           },
                           shape: {
                               type: "circle",
+                              stroke: {
+                                  width: 0,
+                                  color: "#000000"
+                              },
+                              polygon: {
+                                  nb_sides: 5
+                              }
+                          },
+                          opacity: {
+                              value: 0.5,
+                              random: false,
+                              anim: {
+                                  enable: false,
+                                  speed: 1,
+                                  opacity_min: 0.1,
+                                  sync: false
+                              }
                           },
                           size: {
+                              value: 3,
                               random: true,
-                              value: 5,
+                              anim: {
+                                  enable: false,
+                                  speed: 40,
+                                  size_min: 0.1,
+                                  sync: false
+                              }
                           },
+                          line_linked: {
+                              enable: true,
+                              distance: 150,
+                              color: "#ffffff",
+                              opacity: 0.4,
+                              width: 1
+                          },
+                          move: {
+                              enable: true,
+                              speed: 6,
+                              direction: "none",
+                              random: false,
+                              straight: false,
+                              out_mode: "out",
+                              bounce: false,
+                              attract: {
+                                  enable: false,
+                                  rotateX: 600,
+                                  rotateY: 1200
+                              }
+                          }
                       },
                       detectRetina: true,
                   }}
               />
+
+
+
+
           </div>
         );
     }
