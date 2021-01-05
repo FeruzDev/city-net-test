@@ -15,11 +15,15 @@ class Footer extends Component {
 
                         <p className="footer-links">
 
-                            <a to="/company">О Компании</a>
+                            <a  >О Компании</a>
 
-                            <a to="/tariff">Интернет</a>
+                            <a >Интернет</a>
 
-                            <a to="/news">Новости</a>
+                            <a >Новости</a>
+
+                            <a >Oбъявление</a>
+
+                            <a href="#">Контакты</a>
 
                             <a href="#">Публичная Оферта</a>
 
