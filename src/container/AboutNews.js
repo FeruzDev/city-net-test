@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Container, Row, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardFooter} from "reactstrap";
+import {Col, Container, Row, Card } from "reactstrap";
 
 class AboutNews extends Component {
     constructor(props) {
@@ -99,13 +99,31 @@ class AboutNews extends Component {
                         <Col md={4}>
                             <div className="inputGroupM">
                                 <div className="inputGroup">
-                                    <input type="text"  placeholder="Search.." />
+                                    <input type="text"  placeholder="Поиск..." />
                                     <button><img src="./img/icon/loupe.svg" alt=""/></button>
                                 </div>
-                                <button className="searchBtn">SEARCH</button>
+                                <button className="searchBtn">ПОИСК</button>
+                            </div>
+                            <div className="category">
+                                <h2>Категория</h2>
+                                <div>
+                                    <a href="#!">
+                                        Интернет <span>(12)</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#!">
+                                        IP TV <span>(22)</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#!">
+                                        IP телефония <span>(12)</span>
+                                    </a>
+                                </div>
                             </div>
                             <div className="recentPost">
-                                <h2>Recent Post</h2>
+                                <h2>Недавний пост</h2>
                                 <div>
                                     <img src="img/ipt2.jpeg" alt="News image cap"/>
                                   <p>

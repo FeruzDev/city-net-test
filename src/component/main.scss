@@ -1426,6 +1426,7 @@ background-color: #fff;
           margin-top: 4vw;
           background: #fbf9ff;
           padding: 2vw 2vw;
+          box-shadow: 0px 10px 20px 0px rgba(221,221,221,0.3);
           .inputGroup{
             display: flex;
             flex-direction: row;
@@ -1492,10 +1493,41 @@ background-color: #fff;
           }
 
         }
+        .category{
+          padding: 2vw;
+          background: #fbf9ff;
+          margin-top: 2vw;
+          box-shadow: 0px 10px 20px 0px rgba(221,221,221,0.3);
+          h2{
+            color: #1F7BBE;
+            margin-bottom: 2vw;
+            text-align: center;
+
+            font-weight: 500;
+            padding-bottom: 1vw;
+            border-bottom: 2px solid #ddd;
+            font-size: 2vw;
+          }
+          div{
+            padding: 1vw 0;
+            border-bottom: 1px solid #ddd;
+            a{
+              color: #646D77;
+              font-size: 1.2vw;
+              font-weight: 600;
+              transition: .4s;
+            }
+            a:hover{
+              text-decoration: none;
+              color: #1F7BBE;
+            }
+          }
+        }
         .recentPost{
           padding: 2vw;
           background: #fbf9ff;
           margin-top: 2vw;
+          box-shadow: 0px 10px 20px 0px rgba(221,221,221,0.3);
           h2{
             color: #1F7BBE;
             margin-bottom: 2vw;

@@ -4,7 +4,6 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 import "semantic-ui-css/semantic.min.css";
-import Home from "./component/Home";
 
 import Footer from "./component/Footer";
 
@@ -29,7 +28,6 @@ ReactDOM.render(
 
         <Router>
             <Navbar/>
-            {/*<Home/>*/}
 
             <Switch>
 

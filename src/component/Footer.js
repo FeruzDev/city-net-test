@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
+import {  Link } from "react-router-dom";
+import {NavItem} from "reactstrap";
+
+
+
 class Footer extends Component {
     render() {
         return (
             <div className="footer">
+                <Link to="/company" >О Компании</Link>
                 <footer className="footer-distributed">
 
                     <div className="footer-left">
@@ -10,13 +16,12 @@ class Footer extends Component {
                         <img src="img/clogo.png" alt=""/>
 
                         <p className="footer-links">
-                            <a href="#" className="link-1">Главное</a>
 
-                            <a href="#">О нас</a>
+                            <a to="/company">О Компании</a>
 
-                            <a href="#">Интернет</a>
+                            <a to="/tariff">Интернет</a>
 
-                            <a href="#">Новости</a>
+                            <a to="/news">Новости</a>
 
                             <a href="#">Публичная Оферта</a>
 
@@ -77,7 +82,7 @@ class Footer extends Component {
 
                     </div>
 
-                    <p className="footerTitle">©2018 - 2020 "OOO Citynet". Все права защищены.</p>
+                    <p className="footerTitle">©2018 - {new Date().getFullYear()} "OOO Citynet". Все права защищены.</p>
 
                 </footer>
             </div>
