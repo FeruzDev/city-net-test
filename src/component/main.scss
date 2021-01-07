@@ -1969,6 +1969,21 @@ background-color: #fff;
 @media (max-width: 750px) {
 
 
+
+
+
+  .aboutBackFon{
+    background-size: 100% 100%;
+    height: 20vh;
+    h2{
+      font-size: 6vw;
+
+      color: #fff !important;
+    }
+  }
+
+
+
   .Home{
     .animated-text{
 
@@ -2392,25 +2407,31 @@ background-color: #fff;
   .AboutCompany{
     .aboutCompanyTitle{
       padding-top: 12vw;
-      padding-left: 12vw;
       font-size: 4vw;
     }
 
 
 
-    section{
-      ul{
-        width: 50%;
-        margin-left: -4vw;
-        li{
-          font-size: 3vw;
-          img{
-            width: 5vw;
+    .aboutCompanyP{
+
+          .companyList{
+            flex-direction: column;
+            margin: 0;
+            div{
+              width: 100%;
+              margin-top: 2vw;
+              h4{
+
+                font-size: 4vw;
+              }
+              h4::before{
+                display: none;
+              }
+            }
+            div::before, div::after{
+              display: none;
+            }
           }
-
-
-        }
-      }
 
     }
     main{
@@ -2764,20 +2785,63 @@ background-color: #fff;
 
 
   .Contact{
-    h1{
 
-
-      font-size:4vw;
-    }
-    .backCon{
-      width: 50vw;
-    }
     .container-fluid{
-      padding: 2vw 12vw;
+      position: relative;
+      padding: 4vw;
       .row{
         .col-md-7{
+          padding:  0 4vw;
 
+
+          h3{
+            font-size:4vw;
+          }
+
+          form{
+            input{
+              margin-top: 2vw;
+              //color: #1F7BBE;
+              font-size: 2.5vw;
+            }
+            textarea{
+              margin-top: 2vw;
+              height: 20vw;
+              font-size: 2.5vw;
+
+            }
+            ::placeholder{
+              font-size: 2vw;
+            }
+            input:focus, textarea:focus{
+              outline: 0;
+            }
+            button{
+              height: 6vw;
+              padding-top: 1vw;
+
+              width: 20vw;
+
+              background: #fff;
+              color: #1F7BBE;
+              display: inline-block;
+              //padding: 18px 44px;
+              font-family: poppins,sans-serif;
+              font-size: 2.5vw;
+              font-weight: 400;
+              border: 1px solid #1F7BBE;
+              text-align: center;
+              text-transform: uppercase;
+              cursor: pointer;
+              transition: 0.5s;
+            }
+            button:hover{
+              background-color: #1F7BBE;
+              color: #fff;
+            }
+          }
         }
+
         .col-md-5{
 
           padding: 2vw;
@@ -2814,44 +2878,212 @@ background-color: #fff;
 
 
         }
+
+
       }
 
     }
   }
 
 
+
   .aboutNews{
+    //padding: 6vw 4vw;
     h1{
       font-size: 4vw;
+
+
+      //padding-top: 4vw;
     }
+
     .container-fluid{
+      padding: 2vw 8vw;
       .row{
-        .col-md-5{
+        .col-md-8{
           .card{
 
+            div{
 
-            margin-top: 4vw;
-            img{
-              height: 35vw ;
+              img{
+                width: 100%;
+                height: 30vw ;
+                //height: 20vw;
+              }
+              .date{
+                position: absolute;
+                width: 12vw;
+
+                span{
+                  font-size: 3vw;
+                }
+              }
+            }
+            .newsTitleLink{
+
+              font-size: 3vw;
+
+            }
+            .newsTitleP{
+              color: #646D77;
+              font-size: 2vw;
+
+            }
+            .newsComments{
+
+              font-size: 2vw;
+              img{
+                width: 2.5vw;
+
+                margin-right: 1vw;
+              }
+              span{
+                margin-right: 1vw;
+              }
             }
 
-            .card-body{
-              .card-title{
+          }
+        }
+        .col-md-4{
+          .inputGroupM{
 
-                font-size: 4vw;
+            .inputGroup{
+
+              height: 6vw;
+              input{
+
+
+                font-size: 3vw;
 
               }
-              .card-text{
+
+
+              button{
+                box-sizing: border-box;
+                padding: 0vw 1vw 1vw 1vw;
+                background-color: #1F7BBE;
+
+
+              }
+
+            }
+
+            .searchBtn{
+              width: 100%;
+              margin-top: 2vw;
+              height: 5vw;
+
+
+
+              font-size: 2.5vw;
+            }
+
+
+
+          }
+          .category{
+            h2{
+              font-size: 4vw;
+            }
+            div{
+              a{
                 font-size: 3vw;
-                line-height: 5vw;
+              }
+
+            }
+          }
+          .recentPost{
+            h2{
+              font-size: 4vw;
+            }
+            div{
+
+
+              img{
+                width: 10vw;
+              }
+              a{
+                font-size: 3vw;
+              }
+
+              span{
+                margin-top: 0.5vw;
+                font-size: 2.5vw;
               }
             }
           }
-
         }
       }
     }
   }
+
+  .docs{
+
+
+
+    .docsItem{
+      margin-top: 8vw;
+      margin-bottom: 8vw;
+      h1{
+        padding: 1vw 3vw;
+        color: #1F7BBE;
+        span{
+          img{
+            margin-right: 2vw;
+            margin-top: -0.5vw;
+
+          }
+        }
+        span{
+
+          img{
+
+            width: 5vw;
+            animation: cycle 2s infinite;
+          }
+
+          @keyframes cycle {
+
+            0%{
+              transform: rotate(-360deg);
+            }
+          }
+        }
+      }
+      div{
+        padding: 1vw 10vw;
+        h2{
+
+
+          //color: #1F7BBE;
+          margin-bottom: 3vw;
+        }
+        a{
+
+
+          color: #000;
+          font-size: 2.5vw;
+          span{
+            img{
+              width: 5vw;
+            }
+          }
+        }
+        a:hover{
+          text-decoration: none;
+          color: #1F7BBE;
+        }
+
+      }
+      hr{
+        width: 90%;
+        margin-top: 2vw;
+      }
+    }
+  }
+
+
+
+
 
   .footer{
     .footer-distributed{
