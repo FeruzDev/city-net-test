@@ -5,7 +5,6 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
 } from 'reactstrap';
@@ -26,12 +25,12 @@ const NavbarMain = (props) => {
 
 
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">
+                    <Link className="navbar-brand" to="/">
                         <Animated animationIn="fadeInRight" animationOut="fadeOut" isVisible={true} animationInDelay="0" animationInDuration="2000">
 
                         <img src="./img/clogo.png" alt=""/>
                         </Animated>
-                    </NavbarBrand>
+                    </Link>
                     <NavbarToggler onClick={toggle} >
                         <img src="img/icon/list.svg" alt=""/>
                     </NavbarToggler>

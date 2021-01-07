@@ -29,7 +29,7 @@ class News extends Component {
                                 <h2>Предлагаем только лучшее</h2>
                                 <div className="description">
                                     {/*<a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>*/}
-                                    <Link to="/news" >ЧИТАТЬ ДАЛЕЕ »</Link>
+                                    <Link to="/news" className="hvr-pop" >ЧИТАТЬ ДАЛЕЕ »</Link>
                                 </div>
 
 
@@ -55,7 +55,7 @@ class News extends Component {
                                 <h2>Никаких стереотипов</h2>
                                 <div className="description">
                                     {/*<a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>*/}
-                                    <Link to="/news" >ЧИТАТЬ ДАЛЕЕ »</Link>
+                                    <Link to="/news"  className="hvr-pop" >ЧИТАТЬ ДАЛЕЕ »</Link>
                                 </div>
 
 

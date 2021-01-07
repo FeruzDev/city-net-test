@@ -20,6 +20,8 @@ import {
     Route,
 } from "react-router-dom";
 import Main from "./component/Main";
+import AdsItem from "./component/AdsItem";
+import Docs from "./component/Docs";
 
 
 ReactDOM.render(
@@ -31,22 +33,26 @@ ReactDOM.render(
 
             <Switch>
 
-                <Route exact path="/">
+                <Route exact path="/" component={Main} />
 
-                    <Main/>
-                </Route>
-                <Route exact path="/company">
-                    <AboutCompany/>
-                </Route>
+
+                <Route exact path="/company" component={AboutCompany} />
+
                 <Route exact path="/tariff" component={AboutPrice}/>
 
                 <Route exact path="/news" component={AboutNews}/>
+                <Route exact path="/ads" component={AdsItem}/>
                 <Route exact path="/contact" component={Contact}/>
+                <Route exact path="/docs" component={Docs} />
             </Switch>
+
+
+
+
+            <Footer/>
         </Router>
 
 
-        <Footer/>
 
 
     </React.StrictMode>,

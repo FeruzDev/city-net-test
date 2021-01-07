@@ -10,6 +10,10 @@ import Company from "./Company";
 import Home from "./Home";
 
 class Main extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div>

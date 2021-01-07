@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import {AvForm, AvField} from 'availity-reactstrap-validation';
 import {Col, Container, Row} from "reactstrap/dist/reactstrap.es";
 
 class Contact extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div  className="Contact">
@@ -10,50 +14,58 @@ class Contact extends Component {
                     <h2>Связаться с нами</h2>
                 </div>
                 <img className="backCon" src="img\backCon.svg" alt=""/>
-                {/*<h1>Связаться с нами</h1>*/}
 
                       <Container fluid={true}>
                           <Row>
                               <Col md={7}>
-                                  <AvForm >
-                                      <AvField
-                                          name='FullName'
-                                          label='Введите свое полное имя'
-                                          required
-                                          type='text'
-                                      />
-
-                                      <AvField
-                                          name='number'
-                                          label=' Введите номер телефона'
-                                          requiredn
-                                          type='number'
-                                      />
 
 
+                                  <h3>Связаться</h3>
+                                  <form id="contact" action="" method="post">
 
-                                      <AvField
-                                          name='tema'
-                                          label='Введите тему'
-                                          required
-                                          type='text'
-                                      />
+                                      <fieldset>
+                                          <input    name='FullName'
+                                                    placeholder='Введите свое полное имя'
+                                                    required
+                                                    type='text'
+                                                    autoComplete="off"/>
+                                      </fieldset>
+                                      <fieldset>
+                                          <input  name='number'
+                                                  placeholder=' Введите номер телефона'
+                                                  required
+                                                  type='text'
+                                                  autoComplete="off"
 
-                                      <AvField
-                                          name='message'
-                                          label='Введите сообщение'
-                                          required
-                                          type='textarea'
-                                      />
+                                          />
+                                      </fieldset>
+
+                                      <fieldset>
+                                          <input  name='number'
+                                                  placeholder=' Введите тему'
+                                                  required
+                                                  type='text'
+                                                  autoComplete="off"/>
+
+                                      </fieldset>
+
+
+                                      <fieldset>
+                                          <textarea    name='message'
+                                                       placeholder='Введите сообщение'
+                                                       required
+                                                       type='textarea' />
+                                      </fieldset>
+                                      <fieldset>
+                                          <button name="submit" type="submit"
+                                                 >ОТПРАВИТЬ
+                                          </button>
+                                      </fieldset>
+
+                                  </form>
 
 
 
-                                      <button type="submit" className="btn btn-primary d-block mr-auto">ОТПРАВИТЬ</button>
-
-
-
-
-                                  </AvForm>
                               </Col>
                               <Col md={5}>
                                   <div className="footer-center">

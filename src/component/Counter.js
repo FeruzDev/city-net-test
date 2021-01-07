@@ -1,8 +1,10 @@
 import React from 'react'
 
-
-
 class Counter extends React.Component {
+
+
+
+
     constructor(props) {
         super(props);
 
@@ -11,6 +13,7 @@ class Counter extends React.Component {
             seconds2: 0,
             seconds3: 0
         };
+
     }
     tick() {
         if (this.state.seconds < 20000) {
@@ -48,12 +51,19 @@ class Counter extends React.Component {
         clearInterval(this.interval);
     }
 
+
+
+
+
     render() {
         return <div className="Counter">
 
             <div> <span>{this.state.seconds} + </span><span>Км кабелей</span></div>
             <div> <span>{this.state.seconds2} + </span><span>Видеокамер</span></div>
             <div> <span>{this.state.seconds3} + </span><span>Объектов</span></div>
+
+
+
 
     </div>;
 

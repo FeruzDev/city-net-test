@@ -7,7 +7,7 @@ class Ads extends Component {
             <div className="ads">
                 <Container fluid={true}>
                     <h1>Oбъявление</h1>
-                    <div className="backBlueFon"></div>
+                    {/*<div className="backBlueFon"></div>*/}
                     <Row>
                         <Col md={4}>
 

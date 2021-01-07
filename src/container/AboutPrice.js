@@ -4,6 +4,14 @@ import Client from "../component/Client";
 
 class AboutPrice extends Component {
 
+
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+
+
     render() {
 
         return (

@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import {Button, Col, Container, Row} from "reactstrap";
 class Company extends Component {
+
+
+
+
+
     render() {
 
 
