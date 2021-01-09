@@ -12,13 +12,15 @@ class AdsItem extends Component {
                 <div className="aboutBackFon">
                     <h2>Oбъявление</h2>
                 </div>
-                <Ads></Ads>
-                <Ads></Ads>
-                <Ads></Ads>
-                <Ads></Ads>
-                <Ads></Ads>
-                <Ads></Ads>
-                <Ads></Ads>
+                <div className="addList">
+                    <Ads></Ads>
+                    <Ads></Ads>
+                    <Ads></Ads>
+                    <Ads></Ads>
+                    <Ads></Ads>
+                    <Ads></Ads>
+                    <Ads></Ads>
+                </div>
             </div>
         );
     }
