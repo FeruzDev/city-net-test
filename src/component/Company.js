@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {Button, Col, Container, Row} from "reactstrap";
+
+import {  Link } from "react-router-dom";
+
 class Company extends Component {
 
 
@@ -27,7 +30,7 @@ class Company extends Component {
                                     <li>Проверенные и доказанные нашим опытом стандарты</li>
                                     <li>Один из лидеров в области информационных технол</li>
                                 </ul>
-                                <button>Узнать Больше</button>
+                                <Link to="/company">Узнать Больше</Link>
                             </div>
                         </Col>
                         <Col md={6}>

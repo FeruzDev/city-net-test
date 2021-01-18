@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import Footer from "./component/Footer";
 
 import Navbar from "./component/Navbar";
+import NavbarShopping from "./shopping/component/NavbarShopping";
 import AboutCompany from "./container/AboutCompany";
 
 import Contact from "./component/Contact";
@@ -20,37 +21,55 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import Main from "./component/Main";
+
 import AdsItem from "./component/AdsItem";
 import Docs from "./component/Docs";
+import Choose from "./main/Choose";
+import Main from "./component/Main";
+import HomeCarousel from "./shopping/component/HomeCarousel";
+import App from "./component/App";
+import Reccom from "./shopping/component/Reccom";
+import ShoppingCard from "./shopping/component/ShoppingCard";
+import ShoppingContact from "./shopping/component/ShoppingContact";
 
 
 ReactDOM.render(
     <React.StrictMode>
 
 
+
+
         <Router>
-            <Navbar/>
+            <NavbarShopping></NavbarShopping>
 
-            <Switch>
+            {/*<App/>*/}
 
-                <Route exact path="/" component={Main} />
+            <HomeCarousel></HomeCarousel>
+            <Reccom></Reccom>
+            <ShoppingCard></ShoppingCard>
+            <ShoppingContact></ShoppingContact>
+            {/*<Choose></Choose>*/}
+            {/*<Navbar/>*/}
+            {/**/}
+            {/*<Switch>*/}
+            {/**/}
+            {/*    <Route exact path="/" component={Main} />*/}
+            {/**/}
+            {/**/}
+            {/*    <Route exact path="/company" component={AboutCompany} />*/}
+            {/**/}
+            {/*    <Route exact path="/tariff" component={AboutPrice}/>*/}
+            {/**/}
+            {/*    <Route exact path="/news" component={AboutNews}/>*/}
+            {/*    <Route exact path="/ads" component={AdsItem}/>*/}
+            {/*    <Route exact path="/contact" component={Contact}/>*/}
+            {/*    <Route exact path="/docs" component={Docs} />*/}
+            {/*</Switch>*/}
 
 
-                <Route exact path="/company" component={AboutCompany} />
-
-                <Route exact path="/tariff" component={AboutPrice}/>
-
-                <Route exact path="/news" component={AboutNews}/>
-                <Route exact path="/ads" component={AdsItem}/>
-                <Route exact path="/contact" component={Contact}/>
-                <Route exact path="/docs" component={Docs} />
-            </Switch>
 
 
-
-
-            <Footer/>
+            {/*<Footer/>*/}
 
 
 

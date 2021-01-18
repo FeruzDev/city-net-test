@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "availity-reactstrap-validation": "^2.7.0",
     "bootstrap": "^4.5.0",
@@ -26,6 +27,7 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
     "slick-carousel": "^1.8.1",
+    "three-js": "^79.0.0",
     "use-mediaquery": "^1.0.1"
   },
   "scripts": {

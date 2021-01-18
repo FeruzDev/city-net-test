@@ -42,7 +42,7 @@ class AboutNews extends Component {
                                     <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                     <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
                                         fugiat nulla repellendus velit vero?</p>
-                                    <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+                                    <a href="#!" className="newsComments"><img src="./img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
                             </Card>
                             <Card>
@@ -56,7 +56,7 @@ class AboutNews extends Component {
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
                                     fugiat nulla repellendus velit vero?</p>
-                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+                                <a href="#!" className="newsComments"><img src="./img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
                             </Card>
                             <Card>
@@ -70,7 +70,7 @@ class AboutNews extends Component {
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
                                     fugiat nulla repellendus velit vero?</p>
-                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+                                <a href="#!" className="newsComments"><img src="./img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
                             </Card>
                             <Card>
@@ -84,7 +84,7 @@ class AboutNews extends Component {
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
                                     fugiat nulla repellendus velit vero?</p>
-                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+                                <a href="#!" className="newsComments"><img src="./img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
                             </Card>
                             <Card>
@@ -98,10 +98,9 @@ class AboutNews extends Component {
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
                                     fugiat nulla repellendus velit vero?</p>
-                                <a href="#!" className="newsComments"><img src="./img/icon/comm.svg" alt=""/><span>12</span>Comments</a>
+                                <a href="#!" className="newsComments"><img src="./img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
                             </Card>
-
                         </Col>
                         <Col md={4}>
                             <div className="inputGroupM">
