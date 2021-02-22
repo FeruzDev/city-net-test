@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, CardBody, CardTitle, Col, Row} from "reactstrap";
-
+import AOS from 'aos'
 class ShoppingCard extends Component {
     constructor(props) {
         super(props);
@@ -137,7 +137,7 @@ class ShoppingCard extends Component {
         this.loadMore = this.loadMore.bind(this);
 
 
-
+        AOS.init();
     }
 
 
@@ -146,6 +146,8 @@ class ShoppingCard extends Component {
          numberOfitemsShown:  this.state.numberOfitemsShown + 4
         });
     }
+
+
 
 
     render() {
@@ -162,8 +164,8 @@ class ShoppingCard extends Component {
                     {
                         this.state.Data.slice(0, this.state.numberOfitemsShown).map((item, index) =>(
 
-                          <Col md={3}>
-                              <Card>
+                          <Col md={3} data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                              <Card >
                                   <CardTitle><img src={item.camImg} alt=""/></CardTitle>
                                   <CardBody>
 

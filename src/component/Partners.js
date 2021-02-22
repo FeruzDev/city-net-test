@@ -20,38 +20,38 @@ export default class Partners extends Component {
                 <h2>Наши Лучшие Партнеры</h2>
                 <Slider {...settings}>
                     <div className="clientItem">
-                        <img src="img/partners/bosch.png" alt=""/>
+                        <img src="/img/partners/bosch.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/cisco.png" alt=""/>
+                        <img src="/img/partners/cisco.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/dell.png" alt=""/>
+                        <img src="/img/partners/dell.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/Helvar-Logo.jpg" alt=""/>
+                        <img src="/img/partners/Helvar-Logo.jpg" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/hikvision.png" alt=""/>
+                        <img src="/img/partners/hikvision.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/honeywell.png" alt=""/>
+                        <img src="/img/partners/honeywell.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/hp-logo.png" alt=""/>
+                        <img src="/img/partners/hp-logo.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/huawei_logo.png" alt=""/>
+                        <img src="/img/partners/huawei_logo.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/Lenovo_logo.png" alt=""/>
+                        <img src="/img/partners/Lenovo_logo.png" alt=""/>
                     </div>
 
                     <div className="clientItem">
-                        <img src="img/partners/snr.png" alt=""/>
+                        <img src="/img/partners/snr.png" alt=""/>
                     </div>
                     <div className="clientItem">
-                        <img src="img/partners/yea.png" alt=""/>
+                        <img src="/img/partners/yea.png" alt=""/>
                     </div>
 
 

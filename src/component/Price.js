@@ -24,13 +24,13 @@ const Example = (props) => {
                       <th  scope="row">NEXT</th>
                       <td>6 Мбит/с</td>
                       <td>95000 Сум</td>
-                      <td><Link to="/contact">ЗАКАЗАТЬ</Link></td>
+                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
                   </tr>
                   <tr>
                       <th  scope="row">OPTIMUM</th>
                       <td>10 Мбит/с</td>
                       <td>115000 Сум</td>
-                      <td><Link to="/contact">ЗАКАЗАТЬ</Link></td>
+                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
                   </tr>
 
 
@@ -38,7 +38,7 @@ const Example = (props) => {
                       <th  scope="row">COMFORT</th>
                       <td>20 Мбит/с</td>
                       <td>145000 Сум</td>
-                      <td><Link to="/contact">ЗАКАЗАТЬ</Link></td>
+                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
                   </tr>
 
 
@@ -47,7 +47,7 @@ const Example = (props) => {
                       <th  scope="row">EXCLUSIVE</th>
                       <td>30 Мбит/с</td>
                       <td>195000 Сум</td>
-                      <td><Link to="/contact">ЗАКАЗАТЬ</Link></td>
+                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
                   </tr>
 
 
@@ -55,7 +55,7 @@ const Example = (props) => {
                       <th  scope="row">PREMIUM</th>
                       <td>40 Мбит/с</td>
                       <td>249000 Сум</td>
-                      <td><Link to="/contact">ЗАКАЗАТЬ</Link></td>
+                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
                   </tr>
 
 
@@ -63,7 +63,7 @@ const Example = (props) => {
                   </tbody>
               </Table>
           </div>
-            <a className="priceButton" to="/tariff">Узнать Больше</a>
+            <Link className="priceButton" to="/main-provider/tariff">Узнать Больше</Link>
 
         </div>
 

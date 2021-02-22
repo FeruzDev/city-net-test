@@ -16,7 +16,7 @@ class Company extends Component {
             <div className="company">
                 <Container fluid={true}>
                     <Row>
-                        <Col md={6}>
+                        <Col md={4}>
 
                             <div className="companyTitle">
                                 {/*<h6>Подробнее о нашей компании</h6>*/}
@@ -30,15 +30,16 @@ class Company extends Component {
                                     <li>Проверенные и доказанные нашим опытом стандарты</li>
                                     <li>Один из лидеров в области информационных технол</li>
                                 </ul>
-                                <Link to="/company">Узнать Больше</Link>
+                                <Link to="/main-provider/company">Узнать Больше</Link>
                             </div>
                         </Col>
-                        <Col md={6}>
+                        <Col md={8}>
 
 
 
                             <div >
-                                <img src="img/office.png" alt=""/>
+                                <img src="/img/112w.png" alt=""/>
+                                <img src="/img/office.png" alt=""/>
 
                             </div>
 

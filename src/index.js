@@ -22,7 +22,7 @@ import {
     Route,
 } from "react-router-dom";
 
-import AdsItem from "./component/AdsItem";
+import Ads from "./component/Ads";
 import Docs from "./component/Docs";
 import Choose from "./main/Choose";
 import Main from "./component/Main";
@@ -31,6 +31,16 @@ import App from "./component/App";
 import Reccom from "./shopping/component/Reccom";
 import ShoppingCard from "./shopping/component/ShoppingCard";
 import ShoppingContact from "./shopping/component/ShoppingContact";
+import Client from "./component/Client";
+import Partners from "./component/Partners";
+import Platform from "./shopping/component/Platform";
+import Reviews from "./shopping/component/Reviews";
+import Products from "./shopping/component/Products/Products";
+import MainProduct from "./shopping/component/MainProduct";
+import ShoppingRoute from "./shopping/component/ShoppingRoute";
+import MainProviderComponents from "./component/MainProviderComponents";
+import ProductAddress from "./shopping/component/ProductAddress";
+import AdsView from "./component/AdsView";
 
 
 ReactDOM.render(
@@ -40,31 +50,72 @@ ReactDOM.render(
 
 
         <Router>
-            <NavbarShopping></NavbarShopping>
+            {/*<NavbarShopping></NavbarShopping>*/}
 
             {/*<App/>*/}
 
-            <HomeCarousel></HomeCarousel>
-            <Reccom></Reccom>
-            <ShoppingCard></ShoppingCard>
-            <ShoppingContact></ShoppingContact>
-            {/*<Choose></Choose>*/}
+
+            {/*<Products></Products>*/}
+
+
+
+
+
+
+
+
+                {/*<HomeCarousel></HomeCarousel>*/}
+                {/*<Reccom></Reccom>*/}
+                {/*<ShoppingCard></ShoppingCard>*/}
+                {/*<ShoppingContact></ShoppingContact>*/}
+                {/*<Reviews></Reviews>*/}
+                {/*<Platform></Platform>*/}
+                {/*<Partners></Partners>*/}
+
+
+
+
+
+
+
+
+
+
+
+
             {/*<Navbar/>*/}
-            {/**/}
-            {/*<Switch>*/}
-            {/**/}
-            {/*    <Route exact path="/" component={Main} />*/}
-            {/**/}
-            {/**/}
-            {/*    <Route exact path="/company" component={AboutCompany} />*/}
-            {/**/}
-            {/*    <Route exact path="/tariff" component={AboutPrice}/>*/}
-            {/**/}
-            {/*    <Route exact path="/news" component={AboutNews}/>*/}
-            {/*    <Route exact path="/ads" component={AdsItem}/>*/}
-            {/*    <Route exact path="/contact" component={Contact}/>*/}
-            {/*    <Route exact path="/docs" component={Docs} />*/}
-            {/*</Switch>*/}
+            {/*<Choose></Choose>*/}
+
+            <Switch>
+                {/*<Choose></Choose>*/}
+
+                {/*<Route exact path="/" component={Main} />*/}
+                <Route exact path="/" component={Choose} />
+
+                <Route exact path="/main-provider/company" component={AboutCompany} />
+
+                <Route exact path="/main-provider/tariff" component={AboutPrice}/>
+
+
+                <Route exact path="/main-provider/news" component={AboutNews}/>
+                <Route exact path="/main-provider/ads" component={Ads}/>
+
+                <Route exact path="/main-provider/ads/:id" component={AdsView}/>
+
+
+                <Route exact path="/main-provider/contact" component={Contact}/>
+                <Route exact path="/main-product/contact" component={ShoppingContact}/>
+                <Route exact path="/main-provider/docs" component={Docs} />
+                <Route exact path="/main-product/products" component={Products} />
+                <Route exact path="/main-product" component={MainProduct} />
+                <Route exact path="/main-product/where-can-buy" component={ProductAddress} />
+                {/*<Route exact path="/main-provider" component={Main} />*/}
+
+
+                <Route exact path="/main-provider" component={Main} />
+
+
+            </Switch>
 
 
 

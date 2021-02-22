@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Ads from "./Ads";
+import MainAds from "./MainAds";
 import RecBox from "./RecBox";
 import Counter from "./Counter";
 import Price from "./Price";
@@ -8,6 +8,7 @@ import News from "./News";
 import Client from "./Client";
 import Company from "./Company";
 import Home from "./Home";
+import Footer from "./Footer";
 
 class Main extends Component {
     componentDidMount() {
@@ -18,7 +19,7 @@ class Main extends Component {
         return (
             <div>
                 <Home></Home>
-                <Ads></Ads>
+                <MainAds></MainAds>
                 <RecBox></RecBox>
                 <Counter></Counter>
                 <Company></Company>
@@ -27,6 +28,7 @@ class Main extends Component {
                 <News></News>
                 <Partners></Partners>
 
+                <Footer></Footer>
             </div>
         );
     }

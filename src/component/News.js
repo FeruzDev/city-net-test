@@ -27,9 +27,11 @@ class News extends Component {
                                 <h1 className='title'>Интернет</h1>
 
                                 <h2>Предлагаем только лучшее</h2>
+                                <h5>Lorem ipsum.</h5>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsam temporibus voluptatum?</h6>
                                 <div className="description">
                                     {/*<a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>*/}
-                                    <Link to="/news" className="hvr-pop" >ЧИТАТЬ ДАЛЕЕ »</Link>
+                                    <Link to="/main-provider/news" className="hvr-pop" >ЧИТАТЬ ДАЛЕЕ »</Link>
                                 </div>
 
 
@@ -53,9 +55,11 @@ class News extends Component {
                             <div className='content'>
                                 <h1 className='title'>IP телефония</h1>
                                 <h2>Никаких стереотипов</h2>
+                                <h5>Lorem ipsum.</h5>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsam temporibus voluptatum?</h6>
                                 <div className="description">
                                     {/*<a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>*/}
-                                    <Link to="/news"  className="hvr-pop" >ЧИТАТЬ ДАЛЕЕ »</Link>
+                                    <Link to="/main-provider/news"  className="hvr-pop" >ЧИТАТЬ ДАЛЕЕ »</Link>
                                 </div>
 
 
