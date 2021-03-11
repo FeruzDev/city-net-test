@@ -32,6 +32,7 @@ class ProductFooter extends Component {
                             <Link to='/main-product/ads'>Oбъявление</Link>
 
                             <Link to='/main-product/contact'>Контакты</Link>
+                            <Link to='/'>Главный</Link>
 
 
 
@@ -47,10 +48,10 @@ class ProductFooter extends Component {
                             <a href="https://www.google.ru/maps/place/%D0%A1%D0%B8%D1%82%D0%B8+%D0%9C%D0%B0%D0%BA%D0%BE%D0%BD/@41.3017691,69.2441976,18z/data=!4m5!3m4!1s0x38ae8b01bea9ed3f:0x1b69999ff8968c99!8m2!3d41.3017691!4d69.2441976"
                                className="footerIcon">
                                 <img src="/img/icon/geo.svg" alt=""/>
+                                <p><span> <a
+                                    href="https://www.google.ru/maps/place/%D0%A1%D0%B8%D1%82%D0%B8+%D0%9C%D0%B0%D0%BA%D0%BE%D0%BD/@41.3017691,69.2441976,18z/data=!4m5!3m4!1s0x38ae8b01bea9ed3f:0x1b69999ff8968c99!8m2!3d41.3017691!4d69.2441976"
+                                    target="_blank"> </a>Ташкент, Чилонзор</span> Улица Сеула, дом 14</p>
                             </a>
-                            <p><span> <a
-                                href="https://www.google.ru/maps/place/%D0%A1%D0%B8%D1%82%D0%B8+%D0%9C%D0%B0%D0%BA%D0%BE%D0%BD/@41.3017691,69.2441976,18z/data=!4m5!3m4!1s0x38ae8b01bea9ed3f:0x1b69999ff8968c99!8m2!3d41.3017691!4d69.2441976"
-                                target="_blank"> </a>Ташкент, Чилонзор</span> Улица Сеула, дом 14</p>
                         </div>
 
                         <div>

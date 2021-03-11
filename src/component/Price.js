@@ -1,73 +1,184 @@
-import React from 'react';
-import { Table } from 'reactstrap';
+import React, {Component} from 'react';
 import {  Link } from "react-router-dom";
-const Example = (props) => {
-    return (
-
-        <div className="price">
-
-            {/*<p>Наши Тарифы</p>*/}
-            <h1>Безлимитные Тарифные Планы</h1>
-            <img src="./img/fon3.png" alt=""/>
-          <div className="mainTable">
-              <Table striped>
-                  <thead>
-                  <tr>
-                      <th>Название Тарифа</th>
-                      <th>Скорость</th>
-                      <th>Стоимость</th>
-                      <th>Заказать</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                      <th  scope="row">NEXT</th>
-                      <td>6 Мбит/с</td>
-                      <td>95000 Сум</td>
-                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
-                  </tr>
-                  <tr>
-                      <th  scope="row">OPTIMUM</th>
-                      <td>10 Мбит/с</td>
-                      <td>115000 Сум</td>
-                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
-                  </tr>
+import AOS from "aos";
 
 
-                  <tr>
-                      <th  scope="row">COMFORT</th>
-                      <td>20 Мбит/с</td>
-                      <td>145000 Сум</td>
-                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
-                  </tr>
+class Price extends Component {
+    constructor(props, context) {
+        super(props, context);
+        AOS.init();
+    }
+    render() {
+        return (
+
+
+            <div className="price">
 
 
 
-                  <tr>
-                      <th  scope="row">EXCLUSIVE</th>
-                      <td>30 Мбит/с</td>
-                      <td>195000 Сум</td>
-                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
-                  </tr>
+
+                <div className="container">
+
+                    <h1>Безлимитные Тарифные Планы</h1>
 
 
-                  <tr>
-                      <th  scope="row">PREMIUM</th>
-                      <td>40 Мбит/с</td>
-                      <td>249000 Сум</td>
-                      <td><Link to="/main-provider/contact">ЗАКАЗАТЬ</Link></td>
-                  </tr>
+                    <div data-aos="fade-up"   data-aos-duration="2500">
+
+                    <div className="row">
+                        <div className="box">
+                            <h3>NEXT</h3>
+                            <h1>95 000</h1>
+                            <h3>Сум</h3>
+                        </div>
+
+
+                        <div className="box">
+                            <h4>Nimadir</h4>
+                            <h4>Скорость</h4>
+                            <h4>6 Мбит/с</h4>
+                        </div>
+
+
+                        <div className="box">
+                            <h4> 1 Free WebApp</h4>
+                            <h4>1 Free MobileApp</h4>
+                            <h4>1 Free DesktopApp</h4>
+                        </div>
+                        <div className="box">
+                            <Link to='/main-provider/contact'>ЗАКАЗАТЬ</Link>
+                        </div>
+                    </div>
+
+                    </div>
+
+
+                    <div data-aos="fade-up"   data-aos-duration="2500">
+
+
+                    <div className="row">
+                        <div className="box">
+                            <h3>OPTIMUM</h3>
+                            <h1>115 000</h1>
+                            <h3>Сум</h3>
+                        </div>
+
+
+                        <div className="box">
+                            <h4>Nimadir</h4>
+                            <h4>Скорость</h4>
+                            <h4>10 Мбит/с</h4>
+                        </div>
+
+
+                        <div className="box">
+                            <h4> 1 Free WebApp</h4>
+                            <h4>1 Free MobileApp</h4>
+                            <h4>1 Free DesktopApp</h4>
+                        </div>
+                        <div className="box">
+                            <Link to='/main-provider/contact'>ЗАКАЗАТЬ</Link>
+                        </div>
+                    </div>
+
+
+                    </div>
+
+
+                    <div data-aos="fade-up"   data-aos-duration="2500">
+
+                    <div className="row">
+                        <div className="box">
+                            <h3>COMFORT</h3>
+                            <h1>145 000</h1>
+                            <h3>Сум</h3>
+                        </div>
+
+
+                        <div className="box">
+                            <h4>Nimadir</h4>
+                            <h4>Скорость</h4>
+                            <h4>20 Мбит/с</h4>
+                        </div>
+
+
+                        <div className="box">
+                            <h4> 1 Free WebApp</h4>
+                            <h4>1 Free MobileApp</h4>
+                            <h4>1 Free DesktopApp</h4>
+                        </div>
+                        <div className="box">
+                            <Link to='/main-provider/contact'>ЗАКАЗАТЬ</Link>
+                        </div>
+                    </div>
+
+                    </div>
+
+
+                    <div data-aos="fade-up"   data-aos-duration="2500">
+
+                    <div className="row">
+                        <div className="box">
+                            <h3>EXCLUSIVE</h3>
+                            <h1>195 000</h1>
+                            <h3>Сум</h3>
+                        </div>
+
+
+                        <div className="box">
+                            <h4>Nimadir</h4>
+                            <h4>Скорость</h4>
+                            <h4>30 Мбит/с</h4>
+                        </div>
+
+
+                        <div className="box">
+                            <h4> 1 Free WebApp</h4>
+                            <h4>1 Free MobileApp</h4>
+                            <h4>1 Free DesktopApp</h4>
+                        </div>
+                        <div className="box">
+                            <Link to='/main-provider/contact'>ЗАКАЗАТЬ</Link>
+                        </div>
+                    </div>
+                    </div>
+
+
+                    <div data-aos="fade-up"    data-aos-duration="2500">
+                    <div className="row">
+                        <div className="box">
+                            <h3>PREMIUM</h3>
+                            <h1>249 000</h1>
+                            <h3>Сум</h3>
+                        </div>
+
+
+                        <div className="box">
+                            <h4>Nimadir</h4>
+                            <h4>Скорость</h4>
+                            <h4>40 Мбит/с</h4>
+                        </div>
+
+
+                        <div className="box">
+                            <h4> 1 Free WebApp</h4>
+                            <h4>1 Free MobileApp</h4>
+                            <h4>1 Free DesktopApp</h4>
+                        </div>
+                        <div className="box">
+                            <Link to='/main-provider/contact'>ЗАКАЗАТЬ</Link>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
 
 
 
-                  </tbody>
-              </Table>
-          </div>
-            <Link className="priceButton" to="/main-provider/tariff">Узнать Больше</Link>
+            </div>
 
-        </div>
 
-    );
+        );
+    }
 }
 
-export default Example;
+export default Price;

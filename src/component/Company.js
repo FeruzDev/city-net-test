@@ -14,7 +14,15 @@ class Company extends Component {
 
         return (
             <div className="company">
-                <Container fluid={true}>
+                <Container>
+                    <main>
+                        <h1>Дополнительные услуги компании CityNet</h1>
+                        <p>Компания "CityNet" предлагает полный спектр услуг от проектирования до внедрения, а так же
+                            разработает индивидуальные решения для вашего проекта с учетом его специфики.</p>
+                        <p>Компанией разработана система технической поддержки клиентов в режиме 24/7.</p>
+                    </main>
+                </Container>
+                <Container fluid={true} >
                     <Row>
                         <Col md={4}>
 
@@ -30,7 +38,7 @@ class Company extends Component {
                                     <li>Проверенные и доказанные нашим опытом стандарты</li>
                                     <li>Один из лидеров в области информационных технол</li>
                                 </ul>
-                                <Link to="/main-provider/company">Узнать Больше</Link>
+
                             </div>
                         </Col>
                         <Col md={8}>
@@ -39,7 +47,7 @@ class Company extends Component {
 
                             <div >
                                 <img src="/img/112w.png" alt=""/>
-                                <img src="/img/office.png" alt=""/>
+
 
                             </div>
 

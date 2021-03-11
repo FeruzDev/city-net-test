@@ -173,11 +173,10 @@ const NavbarShopping = (props) => {
 
 
             <Navbar color="light" light expand="md">
-                <Link className="navbar-brand" to="/main-provider">
-                    {/*<Animated animationIn="fadeInRight" animationOut="fadeOut" isVisible={true} animationInDelay="0" animationInDuration="2000">*/}
+                <Link className="navbar-brand" to="/main-product">
 
                     <img src="/img/clogo.png" alt=""/>
-                    {/*</Animated>*/}
+
                 </Link>
                 <NavbarToggler onClick={toggle} >
                     <img src="/img/icon/list.svg" alt=""/>
@@ -187,16 +186,17 @@ const NavbarShopping = (props) => {
                     <Nav className="mr-auto " navbar>
 
                         <NavItem>
-                            <Link to="/main-product/products" >ПРОДУКТЫ</Link>
+                            <Link to="/main-product/products" >Продукты</Link>
                         </NavItem>
                         <NavItem>
-                            <Link to="/main-product/where-can-buy">ГДЕ КУПИТЬ</Link>
+                            <Link to="/main-product/where-can-buy">Где купить</Link>
 
                         </NavItem>
                         <NavItem>
                             <Link to="/main-product/news">Новости</Link>
 
                         </NavItem>
+
                         <NavItem>
                             <Link to="/main-product/ads"  >Oбъявление</Link>
 

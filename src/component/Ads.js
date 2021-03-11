@@ -173,7 +173,7 @@ class Ads extends Component {
 
                 <div className="aboutBackFon"><h2>Oбъявление</h2></div>
 
-                <Container fluid={true}>
+                <Container >
                     <Row>
                         <Col md={8}>
 
@@ -192,7 +192,7 @@ class Ads extends Component {
                             <div className="inputGroupM">
                                 <div className="inputGroup">
                                     <input type="text" placeholder="Поиск..."/>
-                                    <button><img src="/img/icon/loupe.svg" alt=""/></button>
+
                                 </div>
                                 <button className="searchBtn">ПОИСК</button>
                             </div>

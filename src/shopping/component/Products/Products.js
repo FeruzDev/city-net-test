@@ -4,20 +4,36 @@ import {  Link } from "react-router-dom";
 import ProductSlide from "./ProductSlide";
 import NavbarShopping from "../NavbarShopping";
 import '../../../component/main.css'
-    import Navbar from "../../../component/Navbar";
 import ProductFooter from "../ProductFooter";
+import WhatAreWedoingItem from "./WhatAreWedoingItem";
+import axios from "axios";
 class Products extends Component {
 
 
+    constructor(props) {
+        super(props);
 
-
-
+        this.state = {
+            posts: []
+        }
+    }
 
 
     componentDidMount() {
-        window.scrollTo(0, 0);
+        axios.get('http://jsonplaceholder.typicode.com/posts')
+            .then((res) => {
+                this.setState({posts: res.data});
+                console.log(res);
+            })
     }
 
+
+
+    //
+    // componentDidMount() {
+    //     window.scrollTo(0, 0);
+    // }
+    //
 
 
 
@@ -38,23 +54,11 @@ class Products extends Component {
 
                             <Col md={3}>
                                 <div className="productsList">
-                                    <ul>
-                                        <li><Link>Сетевые видеокамеры</Link></li>
-                                        <li><Link>Аналоговые камеры</Link></li>
-                                        <li><Link>Сетевые видеорегистраторы</Link></li>
-                                        <li><Link>Цифровые видеорегистраторы</Link></li>
-                                        <li><Link>Тепловизионное оборудование</Link></li>
-                                        <li><Link>Видеостены и мониторы</Link></li>
-                                        <li><Link>Домофония</Link></li>
-                                        <li><Link>Сетевое оборудование</Link></li>
-                                        <li><Link>Кабели</Link></li>
-                                        <li><Link>СКУД</Link></li>
-                                        <li><Link>Охранные системы</Link></li>
-                                        <li><Link>Аксессуары</Link></li>
-                                        <li><Link>VMS</Link></li>
-                                        <li><Link>Специализированные решения</Link></li>
-                                        <li><Link>Носители информации</Link></li>
-                                    </ul>
+                                      {this.state.posts.slice(0,10).map((item) => (
+
+                              <WhatAreWedoingItem title={item.title} id={item.id}/>
+
+                    ))}
                                 </div>
                             </Col>
                             <Col md={9}>
@@ -178,3 +182,58 @@ class Products extends Component {
 }
 
 export default Products;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// import React, {Component} from 'react';
+//  import axios from 'axios';
+// import WhatAreWedoingItem from "./WhatAreWedoingItem";
+//
+// class Products extends Component {
+//
+//     constructor(props) {
+//         super(props);
+//
+//         this.state = {
+//             posts: []
+//         }
+//     }
+//
+//
+//     componentDidMount() {
+//         axios.get('http://jsonplaceholder.typicode.com/posts')
+//             .then((res) => {
+//                 this.setState({posts: res.data});
+//             })
+//     }
+//
+//
+//     render() {
+//         return (
+//             <div className='container'>
+//                 <h5>Posts</h5>
+//
+//                 <div className="row">
+//                     {this.state.posts.slice(0,10).map((item) => (
+//                         <div className="col-4">
+//                             <WhatAreWedoingItem title={item.title} id={item.id}/>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
+//
+// export default Products;

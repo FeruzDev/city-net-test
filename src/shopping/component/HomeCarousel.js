@@ -35,10 +35,8 @@ class HomeCarousel extends Component {
 
 
 
-                            {/*<Animated animationIn="bounceInRight" animationOut="bounceOutRight" animationInDuration={400} animationOutDuration={400} isVisible={true}>*/}
                                 <img src="./img/shoppingImg/camera2.png" className="animate__animated animate__pulse animate__infinite  animate__slower" alt=""/>
 
-                            {/*</Animated>*/}
                         </div>
 
 

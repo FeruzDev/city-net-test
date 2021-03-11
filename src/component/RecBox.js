@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Container, NavbarBrand, Row} from "reactstrap";
-import {Animated} from "react-animated-css";
+import {Link} from "react-router-dom";
 
 class RecBox extends Component {
     render() {
@@ -8,36 +7,31 @@ class RecBox extends Component {
             <div className="RecCard">
 
 
-                <div className="container2">
+                <div className="container ">
 
 
                     <h1>Воспользуйтесь Нашими Услугами</h1>
 
-
-
                     <img className="backFon1" src="img/backFon.svg" alt=""/>
-
-
-
 
                     <img className="backFon2" src="img/backFon.svg" alt=""/>
 
-                    <div className="card">
+                    <Link to='/main-provider/tariff' className="card">
                         <div className="animCard">
                             <div className="imgBox">
                                 <img src="img/int.jpg" alt=""/>
                                 <h2>Интернет</h2>
                             </div>
                             <div className="content">
-                                {/*<h2>Интернет</h2>*/}
-                                <p>Подключить Интернет в офис ? Не вопрос ! Мы сделаем это в максимально короткие срок</p>
+
+                                <p>  Мы сделаем это в максимально короткие срок</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
 
 
-                    <div className="card">
+                    <Link to='/main-provider/view-ip-tv'  className="card">
                         <div className="animCard">
                         <div className="imgBox">
                             <img src="img/iptv2.jpg" alt=""/>
@@ -48,10 +42,10 @@ class RecBox extends Component {
                             <p>Обратите внимание на тарифы телевидения по оптимальной цене.</p>
                         </div>
                         </div>
-                    </div>
+                    </Link>
 
 
-                    <div className="card">
+                    <Link to='/main-provider/view-ip-phone'  className="card">
                         <div className="animCard">
                         <div className="imgBox">
                             <img src="img/ipt.jpg" alt=""/>
@@ -63,7 +57,7 @@ class RecBox extends Component {
                         </div>
                     </div>
 
-                    </div>
+                    </Link>
                 </div>
 
 

@@ -6,7 +6,7 @@ import Price from "./Price";
 import Partners from "./Partners";
 import News from "./News";
 import Client from "./Client";
-import Company from "./Company";
+
 import Home from "./Home";
 import Footer from "./Footer";
 
@@ -22,11 +22,11 @@ class Main extends Component {
                 <MainAds></MainAds>
                 <RecBox></RecBox>
                 <Counter></Counter>
-                <Company></Company>
+
                 <Price></Price>
-                <Client></Client>
+                {/*<Client></Client>*/}
                 <News></News>
-                <Partners></Partners>
+                {/*<Partners></Partners>*/}
 
                 <Footer></Footer>
             </div>

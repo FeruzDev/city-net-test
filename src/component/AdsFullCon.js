@@ -118,7 +118,7 @@ const AdsFullCon = (props) => {
         <div className="adsFullCon">
 
 
-            <Card>
+            <Link className="card">
                 <div>
                     <img src="/img/ipt.jpg" alt="News image cap"/>
                     <span className="date">
@@ -131,7 +131,7 @@ const AdsFullCon = (props) => {
                 <p className="newsTitleP">{props.body} <Link className="hvr-pop" to={'/main-provider/ads/' + props.id} >more... </Link></p>
                 <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-            </Card>
+            </Link>
 
 
             <div className="adsList">
@@ -140,23 +140,6 @@ const AdsFullCon = (props) => {
 
 
 
-                {/*<Row>*/}
-                {/*    <Col md={4}>*/}
-                {/*        <div className="adsImg">*/}
-                {/*            <img src="/img/ipt.jpg" alt=""/>*/}
-                {/*        </div>*/}
-                {/*    </Col>*/}
-                {/*    <Col md={8}>*/}
-                {/*        <div className="adsTitle">*/}
-                {/*            <h2>{props.title} </h2>*/}
-                {/*            <span>21.12.2020</span>*/}
-                {/*            <p>{props.body}</p>*/}
-                {/*            <Link className="hvr-pop" to={'/main-provider/ads/' + props.id} >ЧИТАТЬ ДАЛЕЕ » </Link>*/}
-
-
-                {/*        </div>*/}
-                {/*    </Col>*/}
-                {/*</Row>*/}
 
 
             </div>

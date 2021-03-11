@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {Col, Container, Row} from "reactstrap";
+import NavbarShopping from "./NavbarShopping";
+import ProductFooter from "./ProductFooter";
 
 class ShoppingContact extends Component {
     render() {
         return (
             <div className="shoppingContact">
-
-
+                <NavbarShopping></NavbarShopping>
                 <Container fluid={true}>
                     <h1>Leave an application</h1>
                     <img src="./img/vectors.png" alt="img.." className="homeCarouselVector"/>

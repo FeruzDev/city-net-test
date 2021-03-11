@@ -19,7 +19,7 @@ class Contact extends Component {
                    </div>
                    {/*<img className="backCon" src="/img\backCon.svg" alt=""/>*/}
 
-                   <Container fluid={true}>
+                   <Container>
                        <Row>
                            <Col md={7}>
 

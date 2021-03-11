@@ -32,10 +32,26 @@ class AboutNews extends Component {
                     <h2>Новости</h2>
                 </div>
 
-                <Container fluid={true}>
+                <Container >
                     <Row>
                         <Col md={8}>
-                            <Card>
+                            <Link className="card">
+                                <div>
+                                    <img src="/img/internet3.jpg" alt="News image cap"/>
+                                    <span className="date">
+                                          <span className="day">7</span>
+                                          <span className="month">Jan</span>
+                                      </span>
+                                </div>
+
+
+                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
+                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
+                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
+                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
+
+                            </Link>
+                            <Link className="card">
                                 <div>
                                     <img src="/img/internet3.jpg" alt="News image cap"/>
                                     <span className="date">
@@ -48,8 +64,8 @@ class AboutNews extends Component {
                                     fugiat nulla repellendus velit vero? <Link> more..</Link></p>
                                 <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Card>
-                            <Card>
+                            </Link>
+                            <Link className="card">
                                 <div>
                                     <img src="/img/internet3.jpg" alt="News image cap"/>
                                     <span className="date">
@@ -59,11 +75,11 @@ class AboutNews extends Component {
                                 </div>
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero?</p>
+                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
                                 <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Card>
-                            <Card>
+                            </Link>
+                            <Link className="card">
                                 <div>
                                     <img src="/img/internet3.jpg" alt="News image cap"/>
                                     <span className="date">
@@ -73,11 +89,11 @@ class AboutNews extends Component {
                                 </div>
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero?</p>
+                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
                                 <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Card>
-                            <Card>
+                            </Link>
+                            <Link className="card">
                                 <div>
                                     <img src="/img/internet3.jpg" alt="News image cap"/>
                                     <span className="date">
@@ -87,30 +103,15 @@ class AboutNews extends Component {
                                 </div>
                                 <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
                                 <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero?</p>
+                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
                                 <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Card>
-                            <Card>
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <span className="date">
-                                          <span className="day">7</span>
-                                          <span className="month">Jan</span>
-                                      </span>
-                                </div>
-                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
-                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero?</p>
-                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
-
-                            </Card>
+                            </Link>
                         </Col>
                         <Col md={4}>
                             <div className="inputGroupM">
                                 <div className="inputGroup">
                                     <input type="text"  placeholder="Поиск..." />
-                                    <button><img src="/img/icon/loupe.svg" alt=""/></button>
                                 </div>
                                 <button className="searchBtn">ПОИСК</button>
                             </div>
@@ -136,7 +137,7 @@ class AboutNews extends Component {
                                 <h2>Недавний пост</h2>
                                 <div>
                                     <img src="/img/ipt2.jpeg" alt="News image cap"/>
-                                    <p>
+                                    <p className='text-self-center'>
                                         <a href="#!">Lorem ipsum dolor.</a>
                                         <span>January 12, 2021</span>
                                     </p>
