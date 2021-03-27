@@ -28,6 +28,7 @@ class ProductAds extends Component {
 
         this.state = {
             posts: [],
+            serPosts: []
 
         }
     }
@@ -40,6 +41,18 @@ class ProductAds extends Component {
                 this.setState({posts: res.data.results})
 
                 console.log(res)
+            })
+            .catch(error => {
+                console.log('error')
+            })
+
+
+        axios.get(API_PATH_MAIN + "service-list")
+            .then(res2 =>{
+
+                this.setState({serPosts: res2.data.results})
+
+                console.log(res2)
             })
             .catch(error => {
                 console.log('error')
@@ -91,20 +104,19 @@ class ProductAds extends Component {
                             <ProductAdsSearch />
                             <div className="category">
                                 <h2>Категория</h2>
-                                <div>
-                                    <a href="#!">
-                                        Интернет <span>{this.state.posts.filter(item => item.category === 1).length}</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#!">
-                                        IP TV <span>{this.state.posts.filter(item => item.category === 2).length}</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#!">
-                                        IP телефония <span>{this.state.posts.filter(item => item.category === 3).length}</span>
-                                    </a>
+                                <div className='d-flex flex-wrap'>
+                                    {this.state.serPosts.filter(item2 => item2.sell_office === true).map((item2, index)=> (
+
+
+                                        <Link className="w-100 mt-3">
+
+                                            <a href="#!">
+                                                {item2.title}
+                                                <span>  ({this.state.posts.filter(item3 => item2.id === item3.category).length})</span>
+
+                                            </a>
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
                             <div className="recentPost">

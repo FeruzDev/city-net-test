@@ -10,7 +10,8 @@ class News extends Component {
         super();
 
         this.state ={
-            posts: []
+            posts: [],
+            serPosts: []
         }
     }
 
@@ -24,6 +25,18 @@ class News extends Component {
 
                 console.log(res)
             })
+
+        axios.get(API_PATH_MAIN + "service-list")
+            .then(res2 =>{
+
+                this.setState({serPosts: res2.data.results})
+
+                console.log(res2)
+            })
+            .catch(error => {
+                console.log('error')
+            })
+
     }
 
     render() {
@@ -54,18 +67,21 @@ class News extends Component {
                                               <h1 className='title'>{item.title}</h1>
 
                                               <h2>{item.date_created}</h2>
-                                              <h5>   {this.state.serPosts.filter(item2 => item2.sell_office === true).map((item2, index)=> (
+                                              <h5>
+                                                  lorem ipsum
+                                                  {/*{this.state.serPosts.map((item2, index)=> (*/}
 
 
-                                                  <Link className="w-100 mt-3">
+                                                  {/*    <Link className="w-100 mt-3">*/}
 
-                                                      <a href="#!">
-                                                          {item2.title}
-                                                          <span>  ({this.state.posts.filter(item3 => item2.id === item3.category).length})</span>
+                                                  {/*        <a href="#!">*/}
 
-                                                      </a>
-                                                  </Link>
-                                              ))}</h5>
+                                                  {/*            <span>  ({this.state.posts.filter(item3 => item2.id === item3.category).this.state.posts.title})</span>*/}
+
+                                                  {/*        </a>*/}
+                                                  {/*    </Link>*/}
+                                                  {/*))}*/}
+                                              </h5>
 
 
                                               <h6 className="pr-4" dangerouslySetInnerHTML={{ __html: item.content }}/>
