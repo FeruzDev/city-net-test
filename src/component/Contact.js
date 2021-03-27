@@ -2,20 +2,64 @@ import React, {Component} from 'react';
 import {Col, Container, Row} from "reactstrap/dist/reactstrap.es";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-
+import { API_PATH_MAIN} from "../tools/constants";
+import axios from "axios";
 class Contact extends Component {
 
+
+    constructor() {
+        super();
+        this.state = {
+            userName: '',
+            userNumber: '',
+            topic: '',
+            content: '',
+            // type : 'provider'
+        }
+    }
+
+
     componentDidMount() {
+
+
+
+
+
         window.scrollTo(0, 0);
     }
 
+
+
+    postForm = (e) =>{
+
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    submitPost = e =>{
+        e.preventDefault()
+        console.log(this.state)
+        let data = new FormData();
+        data.append("name", this.state.userName)
+        data.append("number", this.state.userNumber)
+        data.append("title", this.state.topic)
+        data.append("content", this.state.content)
+
+        axios.post('http://127.0.0.1:8000/ru/api/main/contact-list-create/', data)
+            .then(res=>{
+                console.log(res)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
     render() {
+        const {userName, userNumber, topic, content} = this.state
         return (
            <div>
                <Navbar />
                <div  className="Contact">
                    <div className="aboutBackFon">
-                       <h2>Связаться с нами</h2>
+                       <h2>СВЯЗАТЬСЯ С НАМИ</h2>
                    </div>
                    {/*<img className="backCon" src="/img\backCon.svg" alt=""/>*/}
 
@@ -25,40 +69,58 @@ class Contact extends Component {
 
 
                                <h3>Связаться</h3>
-                               <form id="contact" action="" method="post">
+                               <form onSubmit={this.submitPost}>
 
                                    <fieldset>
-                                       <input    name='FullName'
+                                       <input    name='userName'
                                                  placeholder='Введите свое полное имя'
+                                                 value={userName}
                                                  required
+
                                                  type='text'
-                                                 autoComplete="off"/>
+                                                 autoComplete="off"
+
+                                                 onChange={this.postForm}
+                                       />
                                    </fieldset>
                                    <fieldset>
-                                       <input  name='number'
+                                       <input  name='userNumber'
                                                placeholder=' Введите номер телефона'
+                                               value={userNumber}
                                                required
+
                                                type='text'
                                                autoComplete="off"
+                                               onChange={this.postForm}
 
                                        />
                                    </fieldset>
 
                                    <fieldset>
-                                       <input  name='number'
+                                       <input  name='topic'
                                                placeholder=' Введите тему'
+                                               value={topic}
                                                required
+
                                                type='text'
-                                               autoComplete="off"/>
+                                               autoComplete="off"
+                                               onChange={this.postForm}
+
+
+                                       />
 
                                    </fieldset>
 
 
                                    <fieldset>
-                                          <textarea    name='message'
+                                          <textarea    name='content'
                                                        placeholder='Введите сообщение'
+                                                       value={content}
                                                        required
-                                                       type='textarea' />
+                                                       type='textarea'
+                                                       onChange={this.postForm}
+
+                                          />
                                    </fieldset>
                                    <fieldset>
                                        <button name="submit" type="submit"
@@ -96,7 +158,7 @@ class Contact extends Component {
                              <span className="footerIcon">
                             <img src="/img/icon/info (1).svg" alt=""/>
                             </span>
-                                       <p><span> <a href="mailto:info@citynet.uz" target="-_blank">info@citynet.uz</a></span>Отправьте нам свой запрос в <br/> любое время!</p>
+                                       <p><span> <a href="mailto:info@citynet.uz" target="-_blank">info@citynet.uz</a></span>Отправьте нам свой запрос  <br/> в любое время!</p>
                                    </div>
 
                                </div>

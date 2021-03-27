@@ -2,8 +2,28 @@ import React, {Component} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {Link} from "react-router-dom";
+import axios from "axios";
+import {API_PATH_MAIN} from "../tools/constants";
 
 export default class Partners extends Component {
+    constructor() {
+        super();
+        this.state ={
+            posts: []
+        }
+    }
+
+    componentDidMount() {
+        axios.get(API_PATH_MAIN + "partner-img-list/")
+            .then(res =>{
+                this.setState({posts: res.data.results})
+                console.log(res)
+            })
+    }
+
+
+
     render() {
         const settings = {
             dots: false,
@@ -20,42 +40,16 @@ export default class Partners extends Component {
                <div className="clients">
                    <h2>Наши Лучшие Партнеры</h2>
                    <Slider {...settings}>
-                       <div className="clientItem">
-                           <img src="/img/partners/bosch.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/cisco.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/dell.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/Helvar-Logo.jpg" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/hikvision.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/honeywell.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/hp-logo.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/huawei_logo.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/Lenovo_logo.png" alt=""/>
-                       </div>
-
-                       <div className="clientItem">
-                           <img src="/img/partners/snr.png" alt=""/>
-                       </div>
-                       <div className="clientItem">
-                           <img src="/img/partners/yea.png" alt=""/>
-                       </div>
 
 
+
+                       {
+                           this.state.posts.map((item) =>(
+                               <a href={item.link} className="clientItem">
+                                   <img src={item.img} alt=""/>
+                               </a>
+                           ))
+                       }
 
 
                    </Slider>

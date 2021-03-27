@@ -25,7 +25,7 @@ class Footer extends Component {
                             <p className="footer-links">
                                 <Link to='/'>Главный</Link>
 
-                                <Link to='/main-provider/company'>О Компании</Link>
+                                {/*<Link to='/main-provider/company'>О Компании</Link>*/}
 
                                 <Link to='/main-provider/tariff' href="#">Интернет</Link>
 

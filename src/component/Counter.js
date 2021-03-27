@@ -58,16 +58,16 @@ class Counter extends React.Component {
     render() {
         return <div className="Counter">
 
-           <div className="container">
-               <div> <span>{this.state.seconds} + </span><span>Км кабелей</span></div>
-               <div> <span>{this.state.seconds2} + </span><span>Видеокамер</span></div>
-               <div> <span>{this.state.seconds3} + </span><span>Объектов</span></div>
+            <div className="container">
+                <div> <span>{this.state.seconds} + </span><span>Км кабелей</span></div>
+                <div> <span>{this.state.seconds2} + </span><span>Видеокамер</span></div>
+                <div> <span>{this.state.seconds3} + </span><span>Объектов</span></div>
 
 
-           </div>
+            </div>
 
 
-    </div>;
+        </div>;
 
     }
 }

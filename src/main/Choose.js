@@ -16,47 +16,66 @@ class Choose extends Component {
         return (
 
             <div className='choose'>
-                <ChooseNavbar></ChooseNavbar>
+                <ChooseNavbar/>
 
                 <div className='container '>
                     <div className='ChooseContainerBg'>
-                        <div className="chooseContainer"></div>
-                        <div className="chooseContainer2"></div>
+                        <div className="chooseContainer"/>
+                        <div className="chooseContainer2"/>
                     </div>
 
                     <div className="row">
                         <Link to='/main-product' className="col-md-6">
 
 
-                            <h1>Lorem ipsum dolor.</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi asperiores cupiditate,
-                                dolorum eligendi facilis harum iste minus modi necessitatibus, nobis obcaecati placeat
-                                quam
-                                recusandae rem tempore velit voluptas voluptatibus?</p>
+                            <h1 data-aos="fade-right"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000"  >Tехнические продукты</h1>
+                            <p data-aos="fade-right"
+                                data-aos-easing="linear"
+                                data-aos-duration="1100">Наша компания является официальным дилером представленных торговых марок. Это означает,
+                                что вся продукция действительно фирменная, никакого «серого импорта», на все товары
+                                распространяется гарантия производителя</p>
 
-                            <Link to='/main-product'>
-                                <span>Shopping</span>
-                                <img src="img/icon/right-arrow.svg" alt=""/>
-                            </Link>
+                       <div data-aos="flip-up"
+                            data-aos-easing="linear"
+                            data-aos-duration="1000">
+                           <Link
+                                 to='/main-product'>
+                               <span>Продукты</span>
+                               <img src="img/icon/right-arrow.svg" alt=""/>
+                           </Link>
+                       </div>
 
                         </Link>
 
 
                         <Link to='/main-provider' className="col-md-6">
-                            <h1>Lorem ipsum dolor.</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi asperiores cupiditate,
-                                dolorum eligendi facilis harum iste minus modi necessitatibus, nobis obcaecati placeat
-                                quam
-                                recusandae rem tempore velit voluptas voluptatibus?</p>
-                            < Link to='/main-provider'>
-                                <span>Provider</span>
-                                <img src="img/icon/right-arrow.svg" alt=""/>
-                            </Link>
+                            <h1 data-aos="fade-left"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000">Интернет-провайдер</h1>
+                            <p data-aos="fade-left"
+                               data-aos-easing="linear"
+                               data-aos-duration="1100">Высокоскоростной Домашний Интернет по технологии FTTx (высокая пропускная способность
+                                оптического канала). Стабильный интернет без прерываний и зависаний.</p>
+
+                            <div data-aos="flip-up"
+                                 data-aos-easing="linear"
+                                 data-aos-duration="1000">
+                                <  Link
+                                    to='/main-provider'>
+                                    <span>Провайдер</span>
+                                    <img src="img/icon/right-arrow.svg" alt=""/>
+                                </Link>
+                            </div>
+
+
+
                         </Link>
 
                     </div>
-                    <div className='scrollAnim' ></div>
-                    <div className='scrollAnim2' ></div>
+                    <div className='scrollAnim'/>
+                    <div className='scrollAnim2'/>
 
                 </div>
 

@@ -2,8 +2,26 @@ import React, {Component} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
+import {API_PATH_MAIN} from "../tools/constants";
 
 export default class Client extends Component {
+
+    constructor() {
+        super();
+        this.state ={
+            posts: []
+        }
+    }
+
+    componentDidMount() {
+        axios.get(API_PATH_MAIN + "clients-img-list/")
+            .then(res =>{
+                this.setState({posts: res.data.results})
+                console.log(res)
+            })
+    }
+
     render() {
         const settings = {
             dots: false,
@@ -20,44 +38,16 @@ export default class Client extends Component {
                 <div className="clients">
                     <h2>Наши Лучшие Клиенты</h2>
                     <Slider {...settings}>
-                        <div className="clientItem">
-                            <img src="/img/clients/akfa.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/akfa-medline.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/atlas.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/crafers.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/durable.jpg" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/grt.jpg" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/logo2.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/mediapark.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/olmazor.jpg" alt=""/>
-                        </div>
 
-                        <div className="clientItem">
-                            <img src="/img/clients/Poytaxt-bank-logo.png" alt=""/>
-                        </div>
-                        <div className="clientItem">
-                            <img src="/img/clients/qanotchi.png" alt=""/>
-                        </div>
 
-                        <div className="clientItem">
-                            <img src="/img/clients/compas.png" alt=""/>
-                        </div>
+
+                        {
+                            this.state.posts.map((item) =>(
+                                <a href={item.link} className="clientItem">
+                                    <img src={item.img} alt=""/>
+                                </a>
+                            ))
+                        }
 
 
                     </Slider>

@@ -13,13 +13,22 @@ class TestViewIpPhone extends Component {
         return (
             <div className="whatAreWedoing">
                 <Navbar></Navbar>
-                <div className='container'>
+
+
+
+                <div className="aboutBackFon">
                     <h2>Телефония</h2>
+                </div>
+
+
+
+                <div className='container'>
+
                     <div className="row">
 
 
                         <div className="col-md-4">
-                            <img src="/img/rrr.jpg" alt="img"/>
+                            <img src="/img/ipt.jpg" alt="img"/>
                         </div>
 
 

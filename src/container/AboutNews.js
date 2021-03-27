@@ -3,30 +3,62 @@ import {Col, Container, Row, Card } from "reactstrap";
 import Navbar from "../component/Navbar"
 import Footer from "../component/Footer"
 import {Link} from "react-router-dom";
+import axios from "axios";
+import {API_PATH, API_PATH_MAIN} from "../tools/constants";
+import AdsFullCon from "../component/AdsFullCon";
+import AboutNewsItem from "./AboutNewsItem";
+import Search from "../component/Search";
 class AboutNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            img: ["/img/internet3.jpg"],
-            newsTitle: ["Никаких стереотипов"],
-
-            newContent: ["Наша компания разрушает все сложившиеся стереотипы! Все возможные фантазии о высокой скорости воплощаются благодаря стараниям специалистов компании CityNet!"]
-
+           posts: [],
+            serPosts: []
 
         }
     }
 
 
 
+
+
+
     componentDidMount() {
+        axios.get(API_PATH_MAIN + "news-list")
+            .then(res =>{
+
+                this.setState({posts: res.data.results})
+
+                console.log(res)
+            })
+            .catch(error => {
+                console.log('error')
+            })
+
+        axios.get(API_PATH_MAIN + "service-list")
+            .then(res2 =>{
+
+                this.setState({serPosts: res2.data.results})
+
+                console.log(res2)
+            })
+            .catch(error => {
+                console.log('error')
+            })
+
         window.scrollTo(0, 0);
+
     }
+
 
 
     render() {
         return (
         <div>
-            <Navbar></Navbar>
+            <Navbar />
+
+
+
             <div className="aboutNews">
                 <div className="aboutBackFon">
                     <h2>Новости</h2>
@@ -34,135 +66,68 @@ class AboutNews extends Component {
 
                 <Container >
                     <Row>
+
                         <Col md={8}>
-                            <Link className="card">
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <span className="date">
-                                          <span className="day">7</span>
-                                          <span className="month">Jan</span>
-                                      </span>
-                                </div>
+                            {this.state.posts.filter(item => item.type === 'provider').map((item, index)=> (
 
 
-                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
-                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
-                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
+                                <AboutNewsItem index={index} date_created={item.date_created} img={item.img}
+                                               title={item.title} body={item.content} id={item.id} view={item.view}/>
 
-                            </Link>
-                            <Link className="card">
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <span className="date">
-                                          <span className="day">7</span>
-                                          <span className="month">Jan</span>
-                                      </span>
-                                </div>
-                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
-                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
-                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
+                            ))}
 
-                            </Link>
-                            <Link className="card">
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <span className="date">
-                                          <span className="day">7</span>
-                                          <span className="month">Jan</span>
-                                      </span>
-                                </div>
-                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
-                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
-                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Link>
-                            <Link className="card">
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <span className="date">
-                                          <span className="day">7</span>
-                                          <span className="month">Jan</span>
-                                      </span>
-                                </div>
-                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
-                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
-                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Link>
-                            <Link className="card">
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <span className="date">
-                                          <span className="day">7</span>
-                                          <span className="month">Jan</span>
-                                      </span>
-                                </div>
-                                <a className="newsTitleLink">Lorem ipsum dolor sit.</a>
-                                <p className="newsTitleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis
-                                    fugiat nulla repellendus velit vero? <Link> more..</Link></p>
-                                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>12</span>viewing</a>
 
-                            </Link>
-                        </Col>
+
+
+                                </Col>
                         <Col md={4}>
-                            <div className="inputGroupM">
-                                <div className="inputGroup">
-                                    <input type="text"  placeholder="Поиск..." />
-                                </div>
-                                <button className="searchBtn">ПОИСК</button>
-                            </div>
+                           <Search />
                             <div className="category">
                                 <h2>Категория</h2>
-                                <div>
-                                    <a href="#!">
-                                        Интернет <span>(12)</span>
-                                    </a>
+                                <div className='d-flex flex-wrap'>
+                                    {this.state.serPosts.filter(item2 => item2.sell_office === false).map((item2, index)=> (
+
+
+                                        <Link className="w-100 mt-3">
+
+                                            <a href="#!">
+                                                {item2.title}
+                                                <span>  ({this.state.posts.filter(item3 => item2.id === item3.category).length})</span>
+
+                                            </a>
+                                        </Link>
+                                    ))}
                                 </div>
-                                <div>
-                                    <a href="#!">
-                                        IP TV <span>(22)</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#!">
-                                        IP телефония <span>(12)</span>
-                                    </a>
-                                </div>
+
+
                             </div>
                             <div className="recentPost">
                                 <h2>Недавний пост</h2>
-                                <div>
-                                    <img src="/img/ipt2.jpeg" alt="News image cap"/>
-                                    <p className='text-self-center'>
-                                        <a href="#!">Lorem ipsum dolor.</a>
-                                        <span>January 12, 2021</span>
-                                    </p>
-                                </div>
-                                <div>
-                                    <img src="/img/iptv2.jpg" alt="News image cap"/>
-                                    <p>
-                                        <a href="#!">Lorem ipsum dolor.</a>
-                                        <span>January 12, 2021</span>
-                                    </p>
-                                </div>
-                                <div>
-                                    <img src="/img/int.jpg" alt="News image cap"/>
-                                    <p>
-                                        <a href="#!">Lorem ipsum dolor.</a>
-                                        <span>January 12, 2021</span>
-                                    </p>
-                                </div>
-                                <div>
-                                    <img src="/img/internet3.jpg" alt="News image cap"/>
-                                    <p>
-                                        <a href="#!">Lorem ipsum dolor.</a>
-                                        <span>January 12, 2021</span>
-                                    </p>
-                                </div>
+
+
+
+
+                                {this.state.posts.filter(item => item.type === 'provider').slice(0, 4).map((item, index)=>(
+
+
+
+                                    <div>
+                                        <img src={item.img} alt="News image cap"/>
+                                        <p>
+                                            <Link to={'news/news-detail/' + item.id} >{item.title}</Link>
+                                            <span>{item.date_created}</span>
+                                        </p>
+                                    </div>
+
+                                    //     )}
+                                    // return null
+
+
+
+                                ))}
+
                             </div>
                         </Col>
                     </Row>
@@ -170,7 +135,7 @@ class AboutNews extends Component {
 
 
             </div>
-            <Footer></Footer>
+            <Footer />
         </div>
         );
     }

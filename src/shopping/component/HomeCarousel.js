@@ -1,15 +1,53 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
-import {Animated} from "react-animated-css";
-import App from "../../component/App";
-// import 'animate.compat.css';
-// import 'animate.min.css';
+import axios from "axios";
+import {API_PATH_MAIN, API_PATH_SELLOFFICE} from "../../tools/constants";
 class HomeCarousel extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            post: {},
+            posts : []
+        }
+    }
+
+
+
+
+
+    componentDidMount() {
+
+
+        axios.get(API_PATH_SELLOFFICE + "banner-content-list/")
+            .then(res => {
+                this.setState({post: res.data.results})
+                console.log(res)
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+
+
+
+        axios.get(API_PATH_SELLOFFICE + "banner-img-list/")
+            .then(res => {
+                this.setState({posts: res.data.results})
+                console.log(res)
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+
+
+    }
+
+
     render() {
         const settings = {
             dots: false,
             infinite: true,
-            speed: 1500,
+            speed: 500,
             autoplay: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -19,69 +57,50 @@ class HomeCarousel extends Component {
         return (
             <div className="homeCarousel">
 
-                <Slider {...settings}>
-                    <div className="carouselItems">
-                        <img src="./img/vectors.png" alt="img.." className="homeCarouselVector"/>
-                      <div className="leftTitle">
+                <img src="./img/vectors.png" alt="img.." className="homeCarouselVector"/>
+                <img src="./img/vectors.png" alt="img.." className="homeCarouselVector2"/>
 
-                          <h3>Lorem ipsum dolor.</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor dolores nam natus non
-                              numquam praesentium recusandae saepe totam vitae.</p>
-                          <a href="#!">Lorem</a>
-                          <img src="./img/vectors.png" alt="img.." className="homeCarouselVector2"/>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-6 d-flex align-items-center">
+                            <div className="leftTitle ">
+                                <h2>{this.state.post[0] ? this.state.post[0].title : ""}</h2>
+                                <p>{this.state.post[0] ? this.state.post[0].content : ""}</p>
 
-                      </div>
-                        <div className="rightImg ">
-
-
-
-                                <img src="./img/shoppingImg/camera2.png" className="animate__animated animate__pulse animate__infinite  animate__slower" alt=""/>
-
+                            </div>
                         </div>
-
-
-                    </div>
-
-
-                    <div className="carouselItems">
-                        <img src="./img/vectors.png" alt="img.." className="homeCarouselVector"/>
-                        <div className="leftTitle">
-                            <h3>Transformer ipsum dolor.</h3>
-                            <p>Bonsectetur adipisicing elit. Commodi dolor sit amet, consectetur adipisicing elit. Commodi dolor dolores nam natus non
-                                numquam praesentium recusandae saepe totam vitae.</p>
-                            <a href="#!">Lorem</a>
-                            <img src="./img/vectors.png" alt="img.." className="homeCarouselVector2"/>
-                        </div>
-                        <div className="rightImg ">
-
-                            <img src="./img/shoppingImg/camera1.png  "  className="animate__animated animate__pulse animate__infinite  animate__slower "   alt=""/>
-                        </div>
-                    </div>
+                        <div className="col-md-6">
+                            <Slider {...settings}>
 
 
 
-                    <div className="carouselItems ">
-                        <img src="./img/vectors.png" alt="img.." className="homeCarouselVector"/>
-                        <div className="leftTitle">
-                            <h3>Iipsum Lorem  dolor.</h3>
-                            <p>Saepe totam vitae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor dolores nam natus non
-                                numquam praesentium recusandae saepe totam vitae.</p>
-                            <a href="#!">Lorem</a>
-                            <img src="./img/vectors.png" alt="img.." className="homeCarouselVector2"/>
 
-                        </div>
-                        <div className="rightImg ">
+                                {
+                                    this.state.posts.map((item) =>(
+                                        <div className="carouselItems">
+                                            <div className="rightImg ">
 
-                            <img src="./img/shoppingImg/0.png"  className="animate__animated animate__pulse animate__infinite animate__slower"  alt=""/>
+                                                <img src={item.img}
+                                                     className="animate__animated animate__pulse animate__infinite  animate__slower"
+                                                     alt=""/>
+
+                                            </div>
+
+
+                                        </div>
+                                    ))
+                                }
+
+
+
+
+
+
+
+                            </Slider>
                         </div>
                     </div>
-
-                </Slider>
-
-
-
-
-
+                </div>
 
 
             </div>

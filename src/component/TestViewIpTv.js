@@ -12,14 +12,21 @@ class TestViewIpTv extends Component {
     render() {
         return (
             <div className="whatAreWedoing">
-                <Navbar></Navbar>
-                <div className='container'>
+
+                <Navbar />
+
+
+                <div className="aboutBackFon">
                     <h2>Интернет-провайдер</h2>
+                </div>
+
+                <div className='container'>
+
                     <div className="row">
 
 
                         <div className="col-md-4">
-                            <img src="/img/rrr.jpg" alt="img"/>
+                            <img src="/img/iptv2.jpg" alt="img"/>
                         </div>
 
 

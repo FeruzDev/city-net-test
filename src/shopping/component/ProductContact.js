@@ -106,6 +106,7 @@ class ProductContact extends Component {
                    </Container>
                </div>
                <Footer />
+
            </div>
         );
     }

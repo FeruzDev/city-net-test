@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import AdsItem from "./AdsItem";
 import axios from 'axios';
+import {API_PATH, API_PATH_MAIN} from "../tools/constants";
 
 class MainAds extends Component {
 
@@ -15,10 +16,21 @@ class MainAds extends Component {
 
 
     componentDidMount() {
-        axios.get('http://jsonplaceholder.typicode.com/posts')
-            .then((res) => {
-                this.setState({posts: res.data});
+        axios.get(API_PATH_MAIN + "advertisement-list")
+            .then(res =>{
+
+                this.setState({posts: res.data.results})
+
+                console.log(res)
             })
+            .catch(error => {
+                console.log('error')
+                console.log(error)
+            })
+
+
+        window.scrollTo(0, 0);
+
     }
 
 
@@ -30,10 +42,15 @@ class MainAds extends Component {
 
                 <div className='container'>
                     <h1 className="ml-0" >Oбъявление</h1>
-                    <div className="row">
-                        {this.state.posts.slice(0, 1).map((item) => (
+                    <div className="row"   data-aos="fade-up"
+                         data-aos-easing="linear"
+                         data-aos-duration="1000" >
 
-                            <AdsItem title={item.title} body={item.body} id={item.id}/>
+
+
+                        {this.state.posts.slice(this.state.posts.length - 1).map((item) => (
+
+                            <AdsItem title={item.title} img={item.img} content={item.content} id={item.id}/>
 
 
 

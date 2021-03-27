@@ -11,9 +11,6 @@ import {
     NavItem,
 } from 'reactstrap';
 
-
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
