@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Container, Row} from "reactstrap/dist/reactstrap.es";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+// import Footer from "./Footer";
+// import Navbar from "./Navbar";
 
 class ProductContact extends Component {
 
@@ -12,7 +12,7 @@ class ProductContact extends Component {
     render() {
         return (
            <div>
-               <Navbar />
+               {/*<Navbar />*/}
                <div  className="Contact">
                    <div className="aboutBackFon">
                        <h2>Связаться с нами</h2>
@@ -105,7 +105,7 @@ class ProductContact extends Component {
                        </Row>
                    </Container>
                </div>
-               <Footer />
+               {/*<Footer />*/}
 
            </div>
         );

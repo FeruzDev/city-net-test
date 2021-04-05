@@ -18,17 +18,15 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <Home></Home>
-                <MainAds></MainAds>
-                <RecBox></RecBox>
-                <Counter></Counter>
+                <Home/>
+                <MainAds/>
+                <RecBox/>
+                <Counter/>
 
-                <Price></Price>
-                {/*<Client></Client>*/}
-                <News></News>
-                {/*<Partners></Partners>*/}
+                <Price/>
+                <News/>
 
-                <Footer></Footer>
+                <Footer/>
             </div>
         );
     }

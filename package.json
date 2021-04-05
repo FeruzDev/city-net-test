@@ -23,6 +23,8 @@
     "react-scripts": "3.4.1",
     "react-scroll": "^1.8.0",
     "react-slick": "^0.27.13",
+    "react-spinners": "^0.10.6",
+    "react-toastify": "^7.0.3",
     "react-tsparticles": "^1.18.11",
     "reactstrap": "^8.8.1",
     "sass-loader": "^8.0.2",

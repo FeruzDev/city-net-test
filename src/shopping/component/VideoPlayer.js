@@ -27,11 +27,44 @@ class VideoPlayer extends Component {
     render() {
         return (
 
+
+
+
+
+
            <div className="mainvideoPlayer">
-               <h3  >{this.state.post[0] ? this.state.post[0].title : ""}</h3>
-               <div className="videoPlayer  mt-5" >
-                   <ReactPlayer  playing={true} muted={true}    className='h-80  '   url={this.state.post[0] ? this.state.post[0].video : ""} />
+
+               <div className="halfBack">
+                   <h3>{this.state.post[0] ? this.state.post[0].title : ""}</h3>
                </div>
+
+
+               <div className="container">
+
+
+
+                  <div className="row">
+                      <div className="col-md-8  ">
+                          <div className="videoPlayer " >
+                              <ReactPlayer  playing={true} muted={true}   url={this.state.post[0] ? this.state.post[0].video : ""} />
+                          </div>
+                      </div>
+                      <div className="col-md-4">
+
+
+                          <p dangerouslySetInnerHTML={{ __html: this.state.post[0] ? this.state.post[0].content : "" }}/>
+                      </div>
+                  </div>
+               </div>
+
+
+
+               {/*<div className="videoPlayer  mt-5" >*/}
+               {/*    <ReactPlayer  playing={true} muted={true}    className='h-80  '   url={this.state.post[0] ? this.state.post[0].video : ""} />*/}
+               {/*</div>*/}
+
+
+
            </div>
         );
     }

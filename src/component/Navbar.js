@@ -16,11 +16,19 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import {SITE_LANG} from "../tools/constants";
+import {getText} from "../locales";
 
 const NavbarMain = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
+
+    const changeLang = (lang) => {
+        localStorage.setItem(SITE_LANG, lang);
+        window.location.reload();
+
+    };
 
     return (
         <div className="mainNavbar">
@@ -43,14 +51,14 @@ const NavbarMain = (props) => {
 
                             <div className='mainNavbarUs'>
                                 <NavItem>
-                                    <Link to="/">Главный</Link>
+                                    <Link to="/">{getText("main")}</Link>
 
                                 </NavItem>
                                 <NavItem>
 
                                     <Dropdown>
                                         <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                                            Услуги
+                                            {getText("services")}
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
@@ -69,7 +77,7 @@ const NavbarMain = (props) => {
 
                                     <Dropdown>
                                         <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                                            Блог
+                                            {getText("blog")}
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
@@ -84,7 +92,7 @@ const NavbarMain = (props) => {
                                 </NavItem>
 
                                 <NavItem>
-                                    <Link to="/main-provider/contact">Контакты</Link>
+                                    <Link to="/main-provider/contact">{getText("contact")}</Link>
 
                                 </NavItem>
                             </div>
@@ -98,27 +106,43 @@ const NavbarMain = (props) => {
 
                                 </NavItem>
 
+                                <NavItem>
+
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="transparent" id="dropdown-basic">
+                                            <img src="./img/Vector.png" className="mr-2" alt=""/> <span className="mt-1" >Kабинет</span>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu >
+                                            <Dropdown.Item  href="https://cabinet.citynet.uz/"  target="_blank"> Личный кабинет </Dropdown.Item>
+                                            <Dropdown.Item  href="https://cab.citynet.uz/"  target="_blank" >   Личный кабинет +  </Dropdown.Item>
 
 
+
+
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </NavItem>
 
                                 <NavItem>
 
                                     <Dropdown>
                                         <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                                            RU
+                                          <span style={{"text-transform": "uppercase "}}> { localStorage.getItem(SITE_LANG) || 'RU'}</span>
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
-                                            <Dropdown.Item  > <Link  >UZ</Link></Dropdown.Item>
-                                            <Dropdown.Item  > <Link  >EN</Link></Dropdown.Item>
-                                            <Dropdown.Item  > <Link >RU</Link></Dropdown.Item>
+                                            <Dropdown.Item  > <span onClick={() => changeLang('uz')}  >UZ</span></Dropdown.Item>
+                                            <Dropdown.Item  > <span onClick={() => changeLang('en')} >EN</span></Dropdown.Item>
+                                            <Dropdown.Item  > <span onClick={() => changeLang('ru')}>RU</span></Dropdown.Item>
 
 
 
                                         </Dropdown.Menu>
                                     </Dropdown>
 
-                                </NavItem>
+                            </NavItem>
+
 
                             </div>
                         </Nav>

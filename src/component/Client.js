@@ -29,9 +29,20 @@ export default class Client extends Component {
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
+            pauseOnHover: true,
             speed: 2000,
             autoplaySpeed: 0,
-            cssEase: "linear"
+            cssEase: "linear",
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+                ]
         };
         return (
             <div className="container-fluid">
@@ -43,11 +54,12 @@ export default class Client extends Component {
 
                         {
                             this.state.posts.map((item) =>(
-                                <a href={item.link} className="clientItem">
-                                    <img src={item.img} alt=""/>
+                                <a  target="_blank"  href={item.link} className="clientItem">
+                                    <img className="clientsImg" src={item.img} alt=""/>
                                 </a>
                             ))
                         }
+
 
 
                     </Slider>

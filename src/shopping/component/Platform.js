@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import {API_PATH_SELLOFFICE} from "../../tools/constants";
+import {Col, Row} from "reactstrap";
 
 class Platform extends Component {
 
@@ -41,26 +42,19 @@ class Platform extends Component {
 
                     }
                     <div className="platformItems container    ">
-                        <div>
-                            <img src="./img/shoppingImg/file2.svg" alt=""/>
-                            <p>Настройка упаковки</p>
-                        </div>
-                        <div>
-                            <img src="./img/shoppingImg/diamond.svg" alt=""/>
-                            <p>Рисование логотипа</p>
-                        </div>
-                        <div>
-                            <img src="./img/shoppingImg/pencil.svg" alt=""/>
-                            <p>Настройка рисунка и материала</p>
-                        </div>
-                        <div>
-                            <img src="./img/shoppingImg/demand.svg" alt=""/>
-                            <p>Настройка руководства по эксплуатации</p>
-                        </div>
-                        <div>
-                            <img src="./img/shoppingImg/instructions.svg" alt=""/>
-                            <p>Настройка приложения</p>
-                        </div>
+
+
+
+                        {
+                            this.state.posts.filter(item => item.position === "bottom").map((item) => (
+                                <div>
+                                    <img  src={item.img} alt=""/>
+                                    <p>{item.title}</p>
+                                </div>
+                            ))
+                        }
+
+
                     </div>
                 </div>
             </div>

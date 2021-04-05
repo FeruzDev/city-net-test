@@ -8,6 +8,13 @@ import '../../component/main.css'
 import ProductFooter from "./ProductFooter";
 import VideoPlayer from "./VideoPlayer";
 import AboutCompany from "../../container/AboutCompany";
+import ProductAboutCompany from "./Products/ProductAboutCompany";
+import ProductCarousel from "./addNewProductPage/ProductCarousel";
+import SmartRoom from "./addNewProductPage/SmartRoom";
+import SmartRoomBanner from "./addNewProductPage/SmartRoomBanner";
+import System from "./addNewProductPage/System";
+
+
 
 class MainProduct extends Component {
 
@@ -22,19 +29,24 @@ class MainProduct extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{overflow: "hidden"}}>
 
                 <NavbarShopping />
-                <HomeCarousel></HomeCarousel>
-                <Reccom></Reccom>
+                <HomeCarousel/>
+                <ProductCarousel />
 
-                <VideoPlayer></VideoPlayer>
-                <AboutCompany></AboutCompany>
+                <VideoPlayer/>
+                <System />
+                <Reccom/>
+
+                <SmartRoomBanner />
+                <SmartRoom />
+                <ProductAboutCompany/>
 
 
-                <Platform></Platform>
-                <Partners></Partners>
 
+                <Platform/>
+                <Partners/>
 
                 <ProductFooter />
 

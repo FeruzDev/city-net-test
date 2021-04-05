@@ -11,7 +11,8 @@ class Price extends Component {
 
 
         this.state = {
-            posts: []
+            posts: [],
+            post: {}
         }
     }
 
@@ -22,6 +23,16 @@ class Price extends Component {
                 this.setState({posts: res.data.results})
 
             })
+
+
+
+        axios.get(API_PATH  + "tariff-header-list/")
+            .then(res => {
+                this.setState({post: res.data.results})
+                console.log(res)
+            });
+
+
     }
 
     render() {
@@ -36,7 +47,7 @@ class Price extends Component {
                 <div className="container">
 
                     {/*<h1>Безлимитные Тарифные Планы</h1>*/}
-
+                    <h1 className="aboutPrivceTitle">{this.state.post[0] ? this.state.post[0].title : ""}</h1>
 
                     {
                         this.state.posts.map((item)=>(

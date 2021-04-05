@@ -26,8 +26,8 @@ const AdsFullCon = (props) => {
                 {/*<span style={{marginLeft: '2vw'}}>21.12.2020</span>*/}
                 <p className="newsTitleP" dangerouslySetInnerHTML={{ __html: props.body }}/>
                 {/*<Link className="hvr-pop" to={'/main-provider/ads/advertisement-detail/' + props.id} >more... </Link>*/}
-                <a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>{props.view}</span>viewing</a>
-
+                {/*<a href="#!" className="newsComments"><img src="/img/icon/eye.svg" alt=""/><span>{props.view}</span>viewing</a>*/}
+                <a href=""></a>
             </Link>
 
 

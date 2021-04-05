@@ -50,7 +50,7 @@ class News extends Component {
 
 
                       {
-                          this.state.posts.slice(0,2).map((item)=>(
+                          this.state.posts.slice(0,3).map((item)=>(
 
                               <main  data-aos="zoom-in"
                                      data-aos-easing="linear"
@@ -59,34 +59,23 @@ class News extends Component {
 
                                       <div className='module'>
                                           <div className='thumbnail'>
-                                              <img
-                                                  src={item.img}/>
+                                              <img src={item.img}/>
 
                                           </div>
+
                                           <div className='content'>
                                               <h1 className='title'>{item.title}</h1>
 
-                                              <h2>{item.date_created}</h2>
-                                              <h5>
-                                                  lorem ipsum
-                                                  {/*{this.state.serPosts.map((item2, index)=> (*/}
+                                              {/*<h2>{item.date_created}</h2>*/}
+                                              <h2>
+                                                  | {this.state.serPosts.filter(item3 => item3.id === item.category)[0] && this.state.serPosts.filter(item3 => item3.id === item.category)[0].title}
 
+                                              </h2>
 
-                                                  {/*    <Link className="w-100 mt-3">*/}
-
-                                                  {/*        <a href="#!">*/}
-
-                                                  {/*            <span>  ({this.state.posts.filter(item3 => item2.id === item3.category).this.state.posts.title})</span>*/}
-
-                                                  {/*        </a>*/}
-                                                  {/*    </Link>*/}
-                                                  {/*))}*/}
-                                              </h5>
-
+                                              <h5></h5>
 
                                               <h6 className="pr-4" dangerouslySetInnerHTML={{ __html: item.content }}/>
                                               <div className="description">
-                                                  {/*<a href="#!">ЧИТАТЬ ДАЛЕЕ »</a>*/}
                                                   <Link to={'/main-provider/news/news-detail/' + item.id}    >ЧИТАТЬ ДАЛЕЕ »</Link>
                                               </div>
 

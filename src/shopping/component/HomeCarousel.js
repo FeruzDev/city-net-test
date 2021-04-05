@@ -64,8 +64,8 @@ class HomeCarousel extends Component {
                     <div className="row">
                         <div className="col-md-6 d-flex align-items-center">
                             <div className="leftTitle ">
-                                <h2>{this.state.post[0] ? this.state.post[0].title : ""}</h2>
-                                <p>{this.state.post[0] ? this.state.post[0].content : ""}</p>
+                                <h2 className="typing"> {this.state.post[0] ? this.state.post[0].title : ""}</h2>
+                                <p  data-aos="fade-right"   data-aos-duration="1500">{this.state.post[0] ? this.state.post[0].content : ""}</p>
 
                             </div>
                         </div>

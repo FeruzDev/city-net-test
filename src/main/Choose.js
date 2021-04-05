@@ -81,7 +81,7 @@ class Choose extends Component {
 
 
                 <div className='bgVideo'>
-                    <video src="img\Digital_Net.webm" loop muted
+                    <video src="img\Digital_Net.mp4" loop muted
                            autoPlay>
                     </video>
                 </div>

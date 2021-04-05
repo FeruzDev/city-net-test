@@ -43,11 +43,11 @@ class Products extends Component {
         return (
 
             <div>
-                <NavbarShopping></NavbarShopping>
+                <NavbarShopping />
                 <div className="Products">
                     {/*<NavbarShopping></NavbarShopping>*/}
 
-                    <ProductSlide></ProductSlide>
+                    <ProductSlide />
                     <Container fluid={true}>
                         <h2>Продукты</h2>
                         <Row>
@@ -175,7 +175,7 @@ class Products extends Component {
                     </Container>
 
                 </div>
-                <ProductFooter></ProductFooter>
+                <ProductFooter />
             </div>
         );
     }

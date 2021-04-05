@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { API_PATH_MAIN} from "../tools/constants";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class Contact extends Component {
 
 
@@ -14,7 +16,7 @@ class Contact extends Component {
             userNumber: '',
             topic: '',
             content: '',
-            // type : 'provider'
+            type : 'provider'
         }
     }
 
@@ -43,16 +45,38 @@ class Contact extends Component {
         data.append("number", this.state.userNumber)
         data.append("title", this.state.topic)
         data.append("content", this.state.content)
+        data.append("type", this.state.type)
 
-        axios.post('http://127.0.0.1:8000/ru/api/main/contact-list-create/', data)
+        axios.post('http://api.citynet.uz/ru/api/main/contact-list-create/ ', data)
             .then(res=>{
-                console.log(res)
+
+                if (res.status === 201){
+                    toast.success("Успешно отправлен")
+                } else {
+                    toast.error("Oшибка");
+                }
             })
+
+
             .catch(error => {
                 console.log(error)
             })
+
+
+        this.setState({
+            userName: '',
+            userNumber: '',
+            topic: '',
+            content: '',
+        });
+
+
+
     }
+
+
     render() {
+
         const {userName, userNumber, topic, content} = this.state
         return (
            <div>
@@ -61,8 +85,7 @@ class Contact extends Component {
                    <div className="aboutBackFon">
                        <h2>СВЯЗАТЬСЯ С НАМИ</h2>
                    </div>
-                   {/*<img className="backCon" src="/img\backCon.svg" alt=""/>*/}
-
+                   <ToastContainer />
                    <Container>
                        <Row>
                            <Col md={7}>
@@ -123,8 +146,8 @@ class Contact extends Component {
                                           />
                                    </fieldset>
                                    <fieldset>
-                                       <button name="submit" type="submit"
-                                       >ОТПРАВИТЬ
+                                       <button name="submit" type="submit"   >
+                                           ОТПРАВИТЬ
                                        </button>
                                    </fieldset>
 

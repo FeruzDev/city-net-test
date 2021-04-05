@@ -61,7 +61,7 @@ class AboutPrice extends Component {
 
 
                 </div>
-                  <Price ></Price>
+                  <Price />
 
                 <div className="container">
 
